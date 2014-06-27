@@ -1,0 +1,1988 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>StatSVN - June 2006 Commit Log</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <meta name="Generator" content="StatSVN 0.7.0"/>
+<link rel="stylesheet" href="objectlab-statcvs.css" type="text/css"/>
+<script type="text/javascript" charset="utf-8" src="http://bit.ly/javascript-api.js?version=latest&#38;login=statsvn&#38;apiKey=R_2c362b417d0517c27876cbaca1bb68cc"></script>
+<script type="text/javascript" charset="utf-8">
+   // wait until page is loaded to call API
+   var redir_url;
+   var short_url;
+   BitlyCB.myShortenCallback = function(data) {
+      // this is how to get a result of shortening a single url
+      var result;
+      short_url=null;
+      for (var r in data.results) {
+         result = data.results[r];
+         result['longUrl'] = r;
+         short_url = result['shortUrl'];
+         break;
+      }
+      if (short_url==null) // bit.ly failed
+      document.location=redir_url;
+      else
+      redirToTwitter();
+   };
+   function shortenTweet(url) {
+      if (short_url == null || redir_url!=url) {
+      redir_url = url;
+      BitlyClient.shorten(document.location, 'BitlyCB.myShortenCallback');
+      }
+      else
+      redirToTwitter();
+      return false;
+   }
+   function redirToTwitter() { 
+      // replace {0} which is visible as %7B0} in the link
+      document.location = redir_url.replace('%7B0}', short_url);
+   }
+</script>
+  </head>
+
+<body>
+
+<h1>June 2006 Commit Log</h1>
+<div id="parentlink">&#171; <a href="index.html">Development Statistics for /trunk</a></div>
+
+<div id="nav" class="section">
+<h2>Commit Logs</h2>
+<ul>
+    <li><a href="commitlog.html">December 2008</a></li>
+    <li><a href="2008-11.html">November 2008</a></li>
+    <li><a href="2008-10.html">October 2008</a></li>
+    <li><a href="2008-09.html">September 2008</a></li>
+    <li><a href="2008-08.html">August 2008</a></li>
+    <li><a href="2008-07.html">July 2008</a></li>
+    <li><a href="2008-06.html">June 2008</a></li>
+    <li><a href="2008-05.html">May 2008</a></li>
+    <li><a href="2008-04.html">April 2008</a></li>
+    <li><a href="2008-03.html">March 2008</a></li>
+    <li><a href="2008-02.html">February 2008</a></li>
+    <li><a href="2008-01.html">January 2008</a></li>
+    <li><a href="2007-12.html">December 2007</a></li>
+    <li><a href="2007-11.html">November 2007</a></li>
+    <li><a href="2007-10.html">October 2007</a></li>
+    <li><a href="2007-09.html">September 2007</a></li>
+    <li><a href="2007-08.html">August 2007</a></li>
+    <li><a href="2007-07.html">July 2007</a></li>
+    <li><a href="2007-06.html">June 2007</a></li>
+    <li><a href="2007-05.html">May 2007</a></li>
+    <li><a href="2007-04.html">April 2007</a></li>
+    <li><a href="2007-03.html">March 2007</a></li>
+    <li><a href="2007-02.html">February 2007</a></li>
+    <li><a href="2007-01.html">January 2007</a></li>
+    <li><a href="2006-12.html">December 2006</a></li>
+    <li><a href="2006-11.html">November 2006</a></li>
+    <li><a href="2006-10.html">October 2006</a></li>
+    <li><a href="2006-09.html">September 2006</a></li>
+    <li><a href="2006-08.html">August 2006</a></li>
+    <li><a href="2006-07.html">July 2006</a></li>
+    <li><span class="here">June 2006</span></li>
+    <li><a href="2006-05.html">May 2006</a></li>
+    <li><a href="2006-04.html">April 2006</a></li>
+    <li><a href="2006-03.html">March 2006</a></li>
+</ul>
+</div><dl class="attributes">
+    <dt>Number of Commits:</dt>
+    <dd>68</dd>
+    <dt>Number of Active Developers:</dt>
+    <dd>1</dd>
+</dl>
+<dl class="commitlist">
+  <dt><a name="68"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-21 19:46</span>
+    <a class="permalink" title="Permalink to this commit" href="#68">#68</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">175</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+changed to support variadic invoke
+    </p>
+    <p class="commitdetails"><strong>8</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+8&#160;-14)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="67"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-21 15:48</span>
+    <a class="permalink" title="Permalink to this commit" href="#67">#67</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">174</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made invoke variadic
+    </p>
+    <p class="commitdetails"><strong>69</strong> lines of code changed in <span class="files">26 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        AFn.cs&#160;<span class="change">(+4&#160;-4)</span>,
+        Accessor.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        IFn.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Keyword.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        RT.cs&#160;<span class="change">(+8)</span>,
+        Reflector.cs&#160;<span class="change">(+6&#160;-6)</span>,
+        RestFn0.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn1.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn2.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn3.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn4.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn5.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        Var.cs&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        AFn.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Accessor.java&#160;<span class="change">(+1&#160;-1)</span>,
+        IFn.java&#160;<span class="change">(+1&#160;-1)</span>,
+        Keyword.java&#160;<span class="change">(+1&#160;-1)</span>,
+        RT.java&#160;<span class="change">(+8)</span>,
+        Reflector.java&#160;<span class="change">(+9&#160;-9)</span>,
+        RestFn0.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn1.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn2.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn3.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn4.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn5.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Var.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="66"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-21 15:23</span>
+    <a class="permalink" title="Permalink to this commit" href="#66">#66</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">173</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+bug fix in trim()
+    </p>
+    <p class="commitdetails"><strong>2</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        PersistentArray.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="65"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-21 15:19</span>
+    <a class="permalink" title="Permalink to this commit" href="#65">#65</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">172</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added first,rest, made cons take 2 objects
+    </p>
+    <p class="commitdetails"><strong>64</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        RT.cs&#160;<span class="change">(+11&#160;-4)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        PersistentTree.java&#160;<span class="change">(+11&#160;-11)</span>,
+        RT.java&#160;<span class="change">(+42&#160;-45)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="64"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-20 16:24</span>
+    <a class="permalink" title="Permalink to this commit" href="#64">#64</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">171</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+sync lisp with runtime changes
+    </p>
+    <p class="commitdetails"><strong>22</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        Symbol.cs&#160;<span class="change">(+2)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Symbol.java&#160;<span class="change">(+2)</span>
+      </li>
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+17&#160;-15)</span>,
+        lib.lisp&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="63"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-20 14:10</span>
+    <a class="permalink" title="Permalink to this commit" href="#63">#63</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">170</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added caching of rest
+    </p>
+    <p class="commitdetails"><strong>26</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        FnSeq.cs&#160;<span class="change">(+14&#160;-3)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        FnSeq.java&#160;<span class="change">(+12&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="62"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-19 21:43</span>
+    <a class="permalink" title="Permalink to this commit" href="#62">#62</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">169</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added generational trimming
+    </p>
+    <p class="commitdetails"><strong>277</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="change">(+139&#160;-41)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        PersistentArray.java&#160;<span class="change">(+138&#160;-60)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="61"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-19 17:34</span>
+    <a class="permalink" title="Permalink to this commit" href="#61">#61</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">168</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added Tuple, indexing
+    </p>
+    <p class="commitdetails"><strong>411</strong> lines of code changed in <span class="files">17 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        ArraySeq.cs&#160;<span class="new">(new&#160;48)</span>,
+        IArray.cs&#160;<span class="new">(new&#160;24)</span>,
+        IndexedSeq.cs&#160;<span class="new">(new&#160;21)</span>,
+        PersistentArray.cs&#160;<span class="change">(+72&#160;-5)</span>,
+        PersistentArrayIdentityMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentArrayMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentHashtableMap.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        RT.cs&#160;<span class="change">(+11)</span>,
+        Tuple.cs&#160;<span class="new">(new&#160;90)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        ArraySeq.java&#160;<span class="change">(+1&#160;-1)</span>,
+        IArray.java&#160;<span class="new">(new&#160;19)</span>,
+        IndexedSeq.java&#160;<span class="new">(new&#160;16)</span>,
+        PersistentArray.java&#160;<span class="change">(+65&#160;-3)</span>,
+        PersistentArrayIdentityMap.java&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentArrayMap.java&#160;<span class="change">(+1&#160;-1)</span>,
+        RT.java&#160;<span class="change">(+11)</span>,
+        Tuple.java&#160;<span class="change">(+27&#160;-16)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="60"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-19 15:46</span>
+    <a class="permalink" title="Permalink to this commit" href="#60">#60</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">167</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+interim checkin, added Tuple, ArraySeq
+    </p>
+    <p class="commitdetails"><strong>118</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        clojure.iml&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        ArraySeq.java&#160;<span class="new">(new&#160;43)</span>,
+        Tuple.java&#160;<span class="new">(new&#160;74)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="59"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-15 23:04</span>
+    <a class="permalink" title="Permalink to this commit" href="#59">#59</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">166</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+reader in sync both platforms, symbols, vars, hostnames, numbers, strings, chars, lists, comments
+    </p>
+    <p class="commitdetails"><strong>626</strong> lines of code changed in <span class="files">11 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        ClassName.cs&#160;<span class="new">(new&#160;24)</span>,
+        InstanceMemberName.cs&#160;<span class="new">(new&#160;26)</span>,
+        LineNumberingTextReader.cs&#160;<span class="change">(+19&#160;-1)</span>,
+        LispReader.cs&#160;<span class="new">(new&#160;325)</span>,
+        PersistentTree.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        RT.cs&#160;<span class="change">(+53)</span>,
+        StaticMemberName.cs&#160;<span class="new">(new&#160;27)</span>,
+        Symbol.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Var.cs&#160;<span class="change">(+3&#160;-3)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        LispReader.java&#160;<span class="change">(+104&#160;-24)</span>,
+        RT.java&#160;<span class="change">(+43)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="58"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-13 20:55</span>
+    <a class="permalink" title="Permalink to this commit" href="#58">#58</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">165</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+interim checkin - more work on reader
+    </p>
+    <p class="commitdetails"><strong>165</strong> lines of code changed in <span class="files">5 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        ClassName.java&#160;<span class="new">(new&#160;19)</span>,
+        InstanceMemberName.java&#160;<span class="new">(new&#160;21)</span>,
+        LispReader.java&#160;<span class="change">(+93&#160;-6)</span>,
+        RT.java&#160;<span class="change">(+10)</span>,
+        StaticMemberName.java&#160;<span class="new">(new&#160;22)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="57"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-12 21:21</span>
+    <a class="permalink" title="Permalink to this commit" href="#57">#57</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">164</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+interim checkin - starting reader
+    </p>
+    <p class="commitdetails"><strong>154</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        LispReader.java&#160;<span class="new">(new&#160;149)</span>,
+        RT.java&#160;<span class="change">(+5&#160;-5)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="56"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-12 16:01</span>
+    <a class="permalink" title="Permalink to this commit" href="#56">#56</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">163</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+renamed get,put etc to getAttr...
+    </p>
+    <p class="commitdetails"><strong>28</strong> lines of code changed in <span class="files">8 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        IObj.cs&#160;<span class="change">(+4&#160;-4)</span>,
+        Keyword.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        Obj.cs&#160;<span class="change">(+4&#160;-4)</span>,
+        TObj.cs&#160;<span class="change">(+4&#160;-4)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        IObj.java&#160;<span class="change">(+4&#160;-4)</span>,
+        Keyword.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Obj.java&#160;<span class="change">(+4&#160;-4)</span>,
+        TObj.java&#160;<span class="change">(+4&#160;-4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="55"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-11 22:17</span>
+    <a class="permalink" title="Permalink to this commit" href="#55">#55</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">162</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+renamed get,set et al
+    </p>
+    <p class="commitdetails"><strong>42</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        TObj.cs&#160;<span class="change">(+7&#160;-7)</span>,
+        Transaction.cs&#160;<span class="change">(+14&#160;-14)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        TObj.java&#160;<span class="change">(+7&#160;-7)</span>,
+        Transaction.java&#160;<span class="change">(+14&#160;-14)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="54"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-11 22:10</span>
+    <a class="permalink" title="Permalink to this commit" href="#54">#54</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">161</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+got rid of AGenerator
+    </p>
+    <p class="commitdetails"><strong>0</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        AGenerator.java&#160;<span class="del">(del)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="53"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-11 22:07</span>
+    <a class="permalink" title="Permalink to this commit" href="#53">#53</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">160</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made Objs based upon ArrayIdentityMap, allowed out-of-transaction reads of current vals
+    </p>
+    <p class="commitdetails"><strong>108</strong> lines of code changed in <span class="files">8 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        IObj.cs&#160;<span class="change">(+14&#160;-8)</span>,
+        Obj.cs&#160;<span class="change">(+22&#160;-21)</span>,
+        TObj.cs&#160;<span class="change">(+22&#160;-11)</span>,
+        Transaction.cs&#160;<span class="change">(+5&#160;-2)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        IObj.java&#160;<span class="change">(+8&#160;-10)</span>,
+        Obj.java&#160;<span class="change">(+14&#160;-16)</span>,
+        TObj.java&#160;<span class="change">(+19&#160;-9)</span>,
+        Transaction.java&#160;<span class="change">(+4&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="52"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-11 18:05</span>
+    <a class="permalink" title="Permalink to this commit" href="#52">#52</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">159</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+renamed package to clojure.lang
+    </p>
+    <p class="commitdetails"><strong>54</strong> lines of code changed in <span class="files">54 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        AFn.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        AGenerator.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Accessor.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        BigNum.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Binding.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Box.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Cons.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        DoubleNum.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        EnumeratorIter.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        FixNum.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        FloatNum.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        FnSeq.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        IFn.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        IMapEntry.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        IObj.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        IPersistentMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        ISeq.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        ISequential.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Indexer.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        IntegerNum.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Iter.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Keyword.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        LineNumberingTextReader.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Namespace.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Num.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Obj.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentArray.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentArrayIdentityMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentArrayMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentHashtableIdentityMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentHashtableMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentHybridIdentityMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentHybridMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentListIdentityMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentListMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentTree.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        RT.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        RatioNum.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        RationalNum.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        RealNum.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Reflector.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        RestFn0.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        RestFn1.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        RestFn2.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        RestFn3.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        RestFn4.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        RestFn5.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Symbol.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        TObj.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        TRef.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        TVal.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        ThreadLocalData.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Transaction.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        Var.cs&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="51"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-11 17:58</span>
+    <a class="permalink" title="Permalink to this commit" href="#51">#51</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">158</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+changed clojure.runtime to clojure.lang
+    </p>
+    <p class="commitdetails"><strong>0</strong> lines of code changed in <span class="files">170 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        AFn.java&#160;<span class="new">(new)</span>,
+        AGenerator.java&#160;<span class="new">(new)</span>,
+        Accessor.java&#160;<span class="change">(changed)</span>,
+        BigNum.java&#160;<span class="change">(changed)</span>,
+        Binding.java&#160;<span class="new">(new)</span>,
+        Box.java&#160;<span class="new">(new)</span>,
+        Cons.java&#160;<span class="change">(changed)</span>,
+        DoubleNum.java&#160;<span class="change">(changed)</span>,
+        FixNum.java&#160;<span class="new">(new)</span>,
+        FloatNum.java&#160;<span class="change">(changed)</span>,
+        FnSeq.java&#160;<span class="change">(changed)</span>,
+        IFn.java&#160;<span class="new">(new)</span>,
+        IMapEntry.java&#160;<span class="change">(changed)</span>,
+        IObj.java&#160;<span class="change">(changed)</span>,
+        IPersistentMap.java&#160;<span class="change">(changed)</span>,
+        ISeq.java&#160;<span class="change">(changed)</span>,
+        ISequential.java&#160;<span class="change">(changed)</span>,
+        Indexer.java&#160;<span class="change">(changed)</span>,
+        IntegerNum.java&#160;<span class="change">(changed)</span>,
+        Iter.java&#160;<span class="change">(changed)</span>,
+        IteratorIter.java&#160;<span class="change">(changed)</span>,
+        Keyword.java&#160;<span class="change">(changed)</span>,
+        LineNumberingPushbackReader.java&#160;<span class="change">(changed)</span>,
+        Namespace.java&#160;<span class="new">(new)</span>,
+        Num.java&#160;<span class="new">(new)</span>,
+        Obj.java&#160;<span class="change">(changed)</span>,
+        PersistentArray.java&#160;<span class="new">(new)</span>,
+        PersistentArrayIdentityMap.java&#160;<span class="new">(new)</span>,
+        PersistentArrayMap.java&#160;<span class="new">(new)</span>,
+        PersistentHashtableIdentityMap.java&#160;<span class="change">(changed)</span>,
+        PersistentHashtableMap.java&#160;<span class="change">(changed)</span>,
+        PersistentHybridIdentityMap.java&#160;<span class="change">(changed)</span>,
+        PersistentHybridMap.java&#160;<span class="new">(new)</span>,
+        PersistentListIdentityMap.java&#160;<span class="new">(new)</span>,
+        PersistentListMap.java&#160;<span class="change">(changed)</span>,
+        PersistentTree.java&#160;<span class="change">(changed)</span>,
+        RT.java&#160;<span class="change">(changed)</span>,
+        RatioNum.java&#160;<span class="change">(changed)</span>,
+        RationalNum.java&#160;<span class="new">(new)</span>,
+        RealNum.java&#160;<span class="new">(new)</span>,
+        Reflector.java&#160;<span class="new">(new)</span>,
+        RestFn0.java&#160;<span class="change">(changed)</span>,
+        RestFn1.java&#160;<span class="new">(new)</span>,
+        RestFn2.java&#160;<span class="new">(new)</span>,
+        RestFn3.java&#160;<span class="change">(changed)</span>,
+        RestFn4.java&#160;<span class="new">(new)</span>,
+        RestFn5.java&#160;<span class="new">(new)</span>,
+        Symbol.java&#160;<span class="new">(new)</span>,
+        TObj.java&#160;<span class="new">(new)</span>,
+        TRef.java&#160;<span class="change">(changed)</span>,
+        TVal.java&#160;<span class="new">(new)</span>,
+        ThreadLocalData.java&#160;<span class="change">(changed)</span>,
+        Transaction.java&#160;<span class="change">(changed)</span>,
+        Var.java&#160;<span class="new">(new)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/runtime</strong>:
+        AFn.java&#160;<span class="del">(del)</span>,
+        AGenerator.java&#160;<span class="del">(del)</span>,
+        Accessor.java&#160;<span class="del">(del)</span>,
+        ArrayMap.java&#160;<span class="del">(del)</span>,
+        BigNum.java&#160;<span class="del">(del)</span>,
+        Binding.java&#160;<span class="del">(del)</span>,
+        Box.java&#160;<span class="del">(del)</span>,
+        Cons.java&#160;<span class="del">(del)</span>,
+        DoubleNum.java&#160;<span class="del">(del)</span>,
+        FixNum.java&#160;<span class="del">(del)</span>,
+        FloatNum.java&#160;<span class="del">(del)</span>,
+        FnSeq.java&#160;<span class="del">(del)</span>,
+        HashtableMap.java&#160;<span class="del">(del)</span>,
+        IFn.java&#160;<span class="del">(del)</span>,
+        IMap.java&#160;<span class="del">(del)</span>,
+        IMapEntry.java&#160;<span class="del">(del)</span>,
+        IObj.java&#160;<span class="del">(del)</span>,
+        IPersistentMap.java&#160;<span class="del">(del)</span>,
+        ISeq.java&#160;<span class="del">(del)</span>,
+        ISequential.java&#160;<span class="del">(del)</span>,
+        IdentityArrayMap.java&#160;<span class="del">(del)</span>,
+        IdentityHashtableMap.java&#160;<span class="del">(del)</span>,
+        Indexer.java&#160;<span class="del">(del)</span>,
+        IntegerNum.java&#160;<span class="del">(del)</span>,
+        Iter.java&#160;<span class="del">(del)</span>,
+        IteratorIter.java&#160;<span class="del">(del)</span>,
+        Keyword.java&#160;<span class="del">(del)</span>,
+        LineNumberingPushbackReader.java&#160;<span class="del">(del)</span>,
+        ListMap.java&#160;<span class="del">(del)</span>,
+        Namespace.java&#160;<span class="del">(del)</span>,
+        Num.java&#160;<span class="del">(del)</span>,
+        Obj.java&#160;<span class="del">(del)</span>,
+        PersistentArray.java&#160;<span class="del">(del)</span>,
+        PersistentArrayIdentityMap.java&#160;<span class="del">(del)</span>,
+        PersistentArrayMap.java&#160;<span class="del">(del)</span>,
+        PersistentHashMap.java&#160;<span class="del">(del)</span>,
+        PersistentHashtableIdentityMap.java&#160;<span class="del">(del)</span>,
+        PersistentHashtableMap.java&#160;<span class="del">(del)</span>,
+        PersistentHybridIdentityMap.java&#160;<span class="del">(del)</span>,
+        PersistentHybridMap.java&#160;<span class="del">(del)</span>,
+        PersistentListIdentityMap.java&#160;<span class="del">(del)</span>,
+        PersistentListMap.java&#160;<span class="del">(del)</span>,
+        PersistentTree.java&#160;<span class="del">(del)</span>,
+        RBTree.java&#160;<span class="del">(del)</span>,
+        RT.java&#160;<span class="del">(del)</span>,
+        RatioNum.java&#160;<span class="del">(del)</span>,
+        RationalNum.java&#160;<span class="del">(del)</span>,
+        RealNum.java&#160;<span class="del">(del)</span>,
+        Reflector.java&#160;<span class="del">(del)</span>,
+        RestFn0.java&#160;<span class="del">(del)</span>,
+        RestFn1.java&#160;<span class="del">(del)</span>,
+        RestFn2.java&#160;<span class="del">(del)</span>,
+        RestFn3.java&#160;<span class="del">(del)</span>,
+        RestFn4.java&#160;<span class="del">(del)</span>,
+        RestFn5.java&#160;<span class="del">(del)</span>,
+        Symbol.java&#160;<span class="del">(del)</span>,
+        TObj.java&#160;<span class="del">(del)</span>,
+        TRef.java&#160;<span class="del">(del)</span>,
+        TVal.java&#160;<span class="del">(del)</span>,
+        ThreadLocalData.java&#160;<span class="del">(del)</span>,
+        Transaction.java&#160;<span class="del">(del)</span>,
+        Var.java&#160;<span class="del">(del)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="50"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-11 17:28</span>
+    <a class="permalink" title="Permalink to this commit" href="#50">#50</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">157</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+renamed org.clojure to clojure
+    </p>
+    <p class="commitdetails"><strong>0</strong> lines of code changed in <span class="files">94 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/runtime</strong>:
+        AFn.java&#160;<span class="new">(new)</span>,
+        AGenerator.java&#160;<span class="change">(changed)</span>,
+        Accessor.java&#160;<span class="change">(changed)</span>,
+        BigNum.java&#160;<span class="change">(changed)</span>,
+        Binding.java&#160;<span class="new">(new)</span>,
+        Box.java&#160;<span class="new">(new)</span>,
+        Cons.java&#160;<span class="new">(new)</span>,
+        DoubleNum.java&#160;<span class="new">(new)</span>,
+        FixNum.java&#160;<span class="change">(changed)</span>,
+        FloatNum.java&#160;<span class="new">(new)</span>,
+        FnSeq.java&#160;<span class="new">(new)</span>,
+        IFn.java&#160;<span class="change">(changed)</span>,
+        IMapEntry.java&#160;<span class="change">(changed)</span>,
+        IObj.java&#160;<span class="new">(new)</span>,
+        IPersistentMap.java&#160;<span class="new">(new)</span>,
+        ISeq.java&#160;<span class="new">(new)</span>,
+        ISequential.java&#160;<span class="new">(new)</span>,
+        Indexer.java&#160;<span class="new">(new)</span>,
+        IntegerNum.java&#160;<span class="new">(new)</span>,
+        Iter.java&#160;<span class="new">(new)</span>,
+        IteratorIter.java&#160;<span class="change">(changed)</span>,
+        Keyword.java&#160;<span class="change">(changed)</span>,
+        LineNumberingPushbackReader.java&#160;<span class="change">(changed)</span>,
+        Namespace.java&#160;<span class="new">(new)</span>,
+        Num.java&#160;<span class="change">(changed)</span>,
+        Obj.java&#160;<span class="change">(changed)</span>,
+        PersistentArray.java&#160;<span class="change">(changed)</span>,
+        PersistentArrayIdentityMap.java&#160;<span class="new">(new)</span>,
+        PersistentArrayMap.java&#160;<span class="new">(new)</span>,
+        PersistentHashtableIdentityMap.java&#160;<span class="new">(new)</span>,
+        PersistentHashtableMap.java&#160;<span class="new">(new)</span>,
+        PersistentHybridIdentityMap.java&#160;<span class="new">(new)</span>,
+        PersistentHybridMap.java&#160;<span class="new">(new)</span>,
+        PersistentListIdentityMap.java&#160;<span class="new">(new)</span>,
+        PersistentListMap.java&#160;<span class="new">(new)</span>,
+        PersistentTree.java&#160;<span class="new">(new)</span>,
+        RT.java&#160;<span class="change">(changed)</span>,
+        RatioNum.java&#160;<span class="change">(changed)</span>,
+        RationalNum.java&#160;<span class="change">(changed)</span>,
+        RealNum.java&#160;<span class="new">(new)</span>,
+        Reflector.java&#160;<span class="change">(changed)</span>,
+        RestFn0.java&#160;<span class="change">(changed)</span>,
+        RestFn1.java&#160;<span class="change">(changed)</span>,
+        RestFn2.java&#160;<span class="change">(changed)</span>,
+        RestFn3.java&#160;<span class="change">(changed)</span>,
+        RestFn4.java&#160;<span class="change">(changed)</span>,
+        RestFn5.java&#160;<span class="change">(changed)</span>,
+        Symbol.java&#160;<span class="new">(new)</span>,
+        TObj.java&#160;<span class="new">(new)</span>,
+        TRef.java&#160;<span class="new">(new)</span>,
+        TVal.java&#160;<span class="change">(changed)</span>,
+        ThreadLocalData.java&#160;<span class="new">(new)</span>,
+        Transaction.java&#160;<span class="change">(changed)</span>,
+        Var.java&#160;<span class="change">(changed)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="49"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-10 22:22</span>
+    <a class="permalink" title="Permalink to this commit" href="#49">#49</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">154</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added FnSeq
+    </p>
+    <p class="commitdetails"><strong>3</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        FnSeq.cs&#160;<span class="new">(new&#160;3)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        FnSeq.java&#160;<span class="new">(new)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="48"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-10 22:18</span>
+    <a class="permalink" title="Permalink to this commit" href="#48">#48</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">153</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+finished tld purge, moved to wide dynamic binding on Vars
+    </p>
+    <p class="commitdetails"><strong>298</strong> lines of code changed in <span class="files">15 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        BigNum.cs&#160;<span class="change">(+9&#160;-9)</span>,
+        Binding.cs&#160;<span class="new">(new&#160;29)</span>,
+        DoubleNum.cs&#160;<span class="change">(+11&#160;-11)</span>,
+        FixNum.cs&#160;<span class="change">(+9&#160;-9)</span>,
+        Num.cs&#160;<span class="change">(+8&#160;-8)</span>,
+        RatioNum.cs&#160;<span class="change">(+11&#160;-11)</span>,
+        Var.cs&#160;<span class="change">(+48&#160;-32)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        BigNum.java&#160;<span class="change">(+9&#160;-9)</span>,
+        Binding.java&#160;<span class="new">(new&#160;25)</span>,
+        DoubleNum.java&#160;<span class="change">(+11&#160;-11)</span>,
+        FixNum.java&#160;<span class="change">(+9&#160;-9)</span>,
+        Num.java&#160;<span class="change">(+8&#160;-8)</span>,
+        RatioNum.java&#160;<span class="change">(+11&#160;-11)</span>,
+        RestFn0.java&#160;<span class="change">(+1&#160;-1)</span>,
+        Var.java&#160;<span class="change">(+99&#160;-97)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="47"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-10 20:29</span>
+    <a class="permalink" title="Permalink to this commit" href="#47">#47</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">152</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+interim checkin, modified TLD - Var broken
+    </p>
+    <p class="commitdetails"><strong>75</strong> lines of code changed in <span class="files">6 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        RT.cs&#160;<span class="change">(+7&#160;-75)</span>,
+        ThreadLocalData.cs&#160;<span class="change">(+22&#160;-53)</span>,
+        Transaction.cs&#160;<span class="change">(+13&#160;-12)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        RT.java&#160;<span class="change">(+5&#160;-73)</span>,
+        ThreadLocalData.java&#160;<span class="change">(+13&#160;-37)</span>,
+        Transaction.java&#160;<span class="change">(+15&#160;-14)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="46"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-10 19:53</span>
+    <a class="permalink" title="Permalink to this commit" href="#46">#46</a>
+  </dt>
+  <dd>
+    <p class="comment">
+interim checkin, removed tld passing from IFn
+    </p>
+    <p class="commitdetails"><strong>354</strong> lines of code changed in <span class="files">30 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        AFn.cs&#160;<span class="change">(+17&#160;-17)</span>,
+        Accessor.cs&#160;<span class="change">(+9&#160;-9)</span>,
+        IFn.cs&#160;<span class="change">(+8&#160;-8)</span>,
+        IObj.cs&#160;<span class="change">(+3&#160;-3)</span>,
+        Keyword.cs&#160;<span class="change">(+11&#160;-11)</span>,
+        Obj.cs&#160;<span class="change">(+3&#160;-3)</span>,
+        RestFn0.cs&#160;<span class="change">(+17&#160;-17)</span>,
+        RestFn1.cs&#160;<span class="change">(+17&#160;-17)</span>,
+        RestFn2.cs&#160;<span class="change">(+16&#160;-16)</span>,
+        RestFn3.cs&#160;<span class="change">(+15&#160;-15)</span>,
+        RestFn4.cs&#160;<span class="change">(+14&#160;-14)</span>,
+        RestFn5.cs&#160;<span class="change">(+13&#160;-13)</span>,
+        TObj.cs&#160;<span class="change">(+9&#160;-9)</span>,
+        Transaction.cs&#160;<span class="change">(+10&#160;-10)</span>,
+        Var.cs&#160;<span class="change">(+14&#160;-14)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        AFn.java&#160;<span class="change">(+17&#160;-17)</span>,
+        Accessor.java&#160;<span class="change">(+9&#160;-11)</span>,
+        IFn.java&#160;<span class="change">(+8&#160;-8)</span>,
+        IObj.java&#160;<span class="change">(+3&#160;-3)</span>,
+        Keyword.java&#160;<span class="change">(+11&#160;-11)</span>,
+        Obj.java&#160;<span class="change">(+3&#160;-3)</span>,
+        RestFn0.java&#160;<span class="change">(+16&#160;-16)</span>,
+        RestFn1.java&#160;<span class="change">(+17&#160;-17)</span>,
+        RestFn2.java&#160;<span class="change">(+16&#160;-16)</span>,
+        RestFn3.java&#160;<span class="change">(+15&#160;-15)</span>,
+        RestFn4.java&#160;<span class="change">(+14&#160;-14)</span>,
+        RestFn5.java&#160;<span class="change">(+13&#160;-13)</span>,
+        TObj.java&#160;<span class="change">(+10&#160;-9)</span>,
+        Transaction.java&#160;<span class="change">(+12&#160;-11)</span>,
+        Var.java&#160;<span class="change">(+14&#160;-14)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="45"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-10 18:40</span>
+    <a class="permalink" title="Permalink to this commit" href="#45">#45</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">149</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added PersistentArrayMap.EMPTY, exception decls
+    </p>
+    <p class="commitdetails"><strong>66</strong> lines of code changed in <span class="files">13 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArrayIdentityMap.cs&#160;<span class="change">(+8&#160;-1)</span>,
+        PersistentArrayMap.cs&#160;<span class="change">(+11&#160;-2)</span>,
+        PersistentHybridIdentityMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentHybridMap.cs&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        ISeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        ISequential.java&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentArrayIdentityMap.java&#160;<span class="change">(+9&#160;-1)</span>,
+        PersistentArrayMap.java&#160;<span class="change">(+11&#160;-2)</span>,
+        PersistentHashtableMap.java&#160;<span class="change">(+5&#160;-5)</span>,
+        PersistentHybridIdentityMap.java&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentHybridMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentTree.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RT.java&#160;<span class="change">(+12&#160;-14)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="44"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-10 16:13</span>
+    <a class="permalink" title="Permalink to this commit" href="#44">#44</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">148</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made ISequential<br />
+<br />
+
+    </p>
+    <p class="commitdetails"><strong>95</strong> lines of code changed in <span class="files">6 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        IPersistentMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentHashtableMap.cs&#160;<span class="change">(+40)</span>,
+        PersistentHybridMap.cs&#160;<span class="change">(+10&#160;-1)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        IPersistentMap.java&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentHashtableMap.java&#160;<span class="change">(+40)</span>,
+        PersistentHybridMap.java&#160;<span class="change">(+3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="43"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-09 16:20</span>
+    <a class="permalink" title="Permalink to this commit" href="#43">#43</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">147</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+reordered sig of Seq.push()
+    </p>
+    <p class="commitdetails"><strong>6</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentTree.cs&#160;<span class="change">(+3&#160;-3)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentTree.java&#160;<span class="change">(+3&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="42"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-09 16:16</span>
+    <a class="permalink" title="Permalink to this commit" href="#42">#42</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">146</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made ISequential<br />
+<br />
+
+    </p>
+    <p class="commitdetails"><strong>180</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentTree.cs&#160;<span class="change">(+50&#160;-1)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentTree.java&#160;<span class="change">(+130&#160;-80)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="41"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-09 15:46</span>
+    <a class="permalink" title="Permalink to this commit" href="#41">#41</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">145</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made ISequential<br />
+<br />
+
+    </p>
+    <p class="commitdetails"><strong>69</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArrayMap.cs&#160;<span class="change">(+34&#160;-1)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentArrayMap.java&#160;<span class="change">(+35&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="40"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-09 14:26</span>
+    <a class="permalink" title="Permalink to this commit" href="#40">#40</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">144</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made Seq members final/readonly
+    </p>
+    <p class="commitdetails"><strong>4</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="change">(+2&#160;-2)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentArray.java&#160;<span class="change">(+2&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="39"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-09 14:24</span>
+    <a class="permalink" title="Permalink to this commit" href="#39">#39</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">143</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made ISequential<br />
+<br />
+
+    </p>
+    <p class="commitdetails"><strong>62</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="change">(+29&#160;-2)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentArray.java&#160;<span class="change">(+33&#160;-7)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="38"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-09 14:14</span>
+    <a class="permalink" title="Permalink to this commit" href="#38">#38</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">142</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made ISequential
+    </p>
+    <p class="commitdetails"><strong>188</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentListIdentityMap.cs&#160;<span class="change">(+46&#160;-1)</span>,
+        PersistentListMap.cs&#160;<span class="change">(+47&#160;-1)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentListIdentityMap.java&#160;<span class="change">(+39&#160;-2)</span>,
+        PersistentListMap.java&#160;<span class="change">(+56&#160;-18)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="37"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-09 13:59</span>
+    <a class="permalink" title="Permalink to this commit" href="#37">#37</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">141</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+renamed rest() to next()
+    </p>
+    <p class="commitdetails"><strong>28</strong> lines of code changed in <span class="files">8 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentHashtableIdentityMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentHashtableMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentListIdentityMap.cs&#160;<span class="change">(+6&#160;-6)</span>,
+        PersistentListMap.cs&#160;<span class="change">(+6&#160;-6)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentHashtableIdentityMap.java&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentHashtableMap.java&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentListIdentityMap.java&#160;<span class="change">(+6&#160;-6)</span>,
+        PersistentListMap.java&#160;<span class="change">(+6&#160;-6)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="36"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-09 13:42</span>
+    <a class="permalink" title="Permalink to this commit" href="#36">#36</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">140</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added ISeq, ISequential, modified Cons
+    </p>
+    <p class="commitdetails"><strong>398</strong> lines of code changed in <span class="files">35 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        AFn.cs&#160;<span class="change">(+24&#160;-24)</span>,
+        Accessor.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        Cons.cs&#160;<span class="change">(+21&#160;-12)</span>,
+        IFn.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        ISeq.cs&#160;<span class="new">(new&#160;22)</span>,
+        ISequential.cs&#160;<span class="new">(new&#160;22)</span>,
+        Keyword.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentTree.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        RT.cs&#160;<span class="change">(+25&#160;-25)</span>,
+        Reflector.cs&#160;<span class="change">(+3&#160;-3)</span>,
+        RestFn0.cs&#160;<span class="change">(+3&#160;-3)</span>,
+        RestFn1.cs&#160;<span class="change">(+6&#160;-6)</span>,
+        RestFn2.cs&#160;<span class="change">(+9&#160;-9)</span>,
+        RestFn3.cs&#160;<span class="change">(+13&#160;-13)</span>,
+        RestFn4.cs&#160;<span class="change">(+18&#160;-18)</span>,
+        RestFn5.cs&#160;<span class="change">(+24&#160;-24)</span>,
+        Transaction.cs&#160;<span class="change">(+5&#160;-5)</span>,
+        Var.cs&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        AFn.java&#160;<span class="change">(+24&#160;-24)</span>,
+        Accessor.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Cons.java&#160;<span class="change">(+15&#160;-14)</span>,
+        IFn.java&#160;<span class="change">(+2&#160;-2)</span>,
+        ISeq.java&#160;<span class="new">(new&#160;24)</span>,
+        ISequential.java&#160;<span class="new">(new&#160;18)</span>,
+        Keyword.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RT.java&#160;<span class="change">(+25&#160;-25)</span>,
+        Reflector.java&#160;<span class="change">(+3&#160;-3)</span>,
+        RestFn0.java&#160;<span class="change">(+3&#160;-3)</span>,
+        RestFn1.java&#160;<span class="change">(+6&#160;-6)</span>,
+        RestFn2.java&#160;<span class="change">(+9&#160;-9)</span>,
+        RestFn3.java&#160;<span class="change">(+13&#160;-13)</span>,
+        RestFn4.java&#160;<span class="change">(+18&#160;-18)</span>,
+        RestFn5.java&#160;<span class="change">(+24&#160;-24)</span>,
+        Transaction.java&#160;<span class="change">(+5&#160;-5)</span>,
+        Var.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="35"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 22:02</span>
+    <a class="permalink" title="Permalink to this commit" href="#35">#35</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">139</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+override fixes
+    </p>
+    <p class="commitdetails"><strong>14</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentHashtableIdentityMap.java&#160;<span class="change">(+8)</span>,
+        PersistentHashtableMap.java&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentTree.java&#160;<span class="change">(+5&#160;-5)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="34"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 22:01</span>
+    <a class="permalink" title="Permalink to this commit" href="#34">#34</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">138</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+test code changes
+    </p>
+    <p class="commitdetails"><strong>48</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentTree.cs&#160;<span class="change">(+47&#160;-27)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="33"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 22:00</span>
+    <a class="permalink" title="Permalink to this commit" href="#33">#33</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">137</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+ported PersistentHybridMap and PersistentHybridIdentityMap<br />
+fixed virtual decls
+    </p>
+    <p class="commitdetails"><strong>172</strong> lines of code changed in <span class="files">6 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArrayIdentityMap.cs&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentArrayMap.cs&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentHashtableIdentityMap.cs&#160;<span class="change">(+10&#160;-3)</span>,
+        PersistentHashtableMap.cs&#160;<span class="change">(+4&#160;-4)</span>,
+        PersistentHybridIdentityMap.cs&#160;<span class="new">(new&#160;50)</span>,
+        PersistentHybridMap.cs&#160;<span class="new">(new&#160;105)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="32"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 21:32</span>
+    <a class="permalink" title="Permalink to this commit" href="#32">#32</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">136</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+ported PersistentHashtableMap and PersistentHashtableIdentityMap
+    </p>
+    <p class="commitdetails"><strong>7</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentHashtableIdentityMap.cs&#160;<span class="new">(new&#160;3)</span>,
+        PersistentHashtableMap.cs&#160;<span class="new">(new&#160;4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="31"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 20:41</span>
+    <a class="permalink" title="Permalink to this commit" href="#31">#31</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">135</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed typo in doc
+    </p>
+    <p class="commitdetails"><strong>2</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentListIdentityMap.java&#160;<span class="change">(+1&#160;-1)</span>,
+        PersistentListMap.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="30"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 20:41</span>
+    <a class="permalink" title="Permalink to this commit" href="#30">#30</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">134</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+ported PersistentListMap, PersistentListIdentityMap
+    </p>
+    <p class="commitdetails"><strong>12</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentListIdentityMap.cs&#160;<span class="new">(new&#160;6)</span>,
+        PersistentListMap.cs&#160;<span class="new">(new&#160;6)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="29"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 20:21</span>
+    <a class="permalink" title="Permalink to this commit" href="#29">#29</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">133</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+ported PersistentArrayIdentityMap
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArrayIdentityMap.cs&#160;<span class="new">(new&#160;1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="28"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 20:18</span>
+    <a class="permalink" title="Permalink to this commit" href="#28">#28</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">132</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+ported PersistentArrayMap
+    </p>
+    <p class="commitdetails"><strong>2</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArrayMap.cs&#160;<span class="new">(new&#160;2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="27"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 19:54</span>
+    <a class="permalink" title="Permalink to this commit" href="#27">#27</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">131</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+renamed to PersistentTree
+    </p>
+    <p class="commitdetails"><strong>794</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentTree.cs&#160;<span class="new">(new&#160;789)</span>,
+        TObj.cs&#160;<span class="change">(+5&#160;-5)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="26"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 19:52</span>
+    <a class="permalink" title="Permalink to this commit" href="#26">#26</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">130</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+derived RBTree from IPersistentMap
+    </p>
+    <p class="commitdetails"><strong>30</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        RBTree.cs&#160;<span class="change">(+29&#160;-20)</span>,
+        TObj.cs&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="25"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 19:36</span>
+    <a class="permalink" title="Permalink to this commit" href="#25">#25</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">129</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added IPersistentMap, IMapEntry
+    </p>
+    <p class="commitdetails"><strong>13</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        IMapEntry.cs&#160;<span class="new">(new&#160;1)</span>,
+        IPersistentMap.cs&#160;<span class="new">(new&#160;12)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="24"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 19:27</span>
+    <a class="permalink" title="Permalink to this commit" href="#24">#24</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">128</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+matches Java
+    </p>
+    <p class="commitdetails"><strong>24</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="change">(+24&#160;-25)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="23"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 19:08</span>
+    <a class="permalink" title="Permalink to this commit" href="#23">#23</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">127</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+renaming
+    </p>
+    <p class="commitdetails"><strong>368</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentArrayIdentityMap.java&#160;<span class="new">(new&#160;27)</span>,
+        PersistentHashtableIdentityMap.java&#160;<span class="new">(new&#160;88)</span>,
+        PersistentHybridIdentityMap.java&#160;<span class="change">(+4&#160;-4)</span>,
+        PersistentListIdentityMap.java&#160;<span class="new">(new&#160;249)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="22"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 19:04</span>
+    <a class="permalink" title="Permalink to this commit" href="#22">#22</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">126</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed up identity versions
+    </p>
+    <p class="commitdetails"><strong>357</strong> lines of code changed in <span class="files">6 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentHashtableMap.java&#160;<span class="change">(+5&#160;-70)</span>,
+        PersistentHybridIdentityMap.java&#160;<span class="new">(new&#160;47)</span>,
+        PersistentHybridMap.java&#160;<span class="change">(+3&#160;-3)</span>,
+        PersistentIdentityHashtableMap.java&#160;<span class="change">(+52&#160;-2)</span>,
+        PersistentIdentityListMap.java&#160;<span class="new">(new&#160;249)</span>,
+        PersistentListMap.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="21"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 18:35</span>
+    <a class="permalink" title="Permalink to this commit" href="#21">#21</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">125</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+renamed persistent data structures
+    </p>
+    <p class="commitdetails"><strong>1661</strong> lines of code changed in <span class="files">9 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        IPersistentMap.java&#160;<span class="new">(new&#160;31)</span>,
+        PersistentArrayMap.java&#160;<span class="new">(new&#160;169)</span>,
+        PersistentHashtableMap.java&#160;<span class="new">(new&#160;280)</span>,
+        PersistentHybridMap.java&#160;<span class="new">(new&#160;101)</span>,
+        PersistentIdentityArrayMap.java&#160;<span class="new">(new&#160;27)</span>,
+        PersistentIdentityHashtableMap.java&#160;<span class="new">(new&#160;38)</span>,
+        PersistentListMap.java&#160;<span class="new">(new&#160;252)</span>,
+        PersistentTree.java&#160;<span class="new">(new&#160;759)</span>,
+        TObj.java&#160;<span class="change">(+4&#160;-4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="20"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 17:10</span>
+    <a class="permalink" title="Permalink to this commit" href="#20">#20</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">124</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+perf tweaks
+    </p>
+    <p class="commitdetails"><strong>47</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        ListMap.java&#160;<span class="change">(+24&#160;-10)</span>,
+        PersistentArray.java&#160;<span class="change">(-1)</span>,
+        PersistentHashMap.java&#160;<span class="change">(+3&#160;-2)</span>,
+        RBTree.java&#160;<span class="change">(+20&#160;-16)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="19"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-07 14:58</span>
+    <a class="permalink" title="Permalink to this commit" href="#19">#19</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">123</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+revamped ListMap
+    </p>
+    <p class="commitdetails"><strong>272</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        HashtableMap.java&#160;<span class="change">(+8&#160;-8)</span>,
+        ListMap.java&#160;<span class="change">(+159&#160;-94)</span>,
+        PersistentArray.java&#160;<span class="change">(+61&#160;-45)</span>,
+        RBTree.java&#160;<span class="change">(+44&#160;-6)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="18"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-06 16:35</span>
+    <a class="permalink" title="Permalink to this commit" href="#18">#18</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">122</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+interim checkin
+    </p>
+    <p class="commitdetails"><strong>255</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        ArrayMap.java&#160;<span class="change">(+1&#160;-1)</span>,
+        HashtableMap.java&#160;<span class="change">(+78&#160;-15)</span>,
+        ListMap.java&#160;<span class="new">(new&#160;173)</span>,
+        RBTree.java&#160;<span class="change">(+3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="17"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-06 02:31</span>
+    <a class="permalink" title="Permalink to this commit" href="#17">#17</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">121</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+interim checkin
+    </p>
+    <p class="commitdetails"><strong>384</strong> lines of code changed in <span class="files">7 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        ArrayMap.java&#160;<span class="change">(+5&#160;-2)</span>,
+        HashtableMap.java&#160;<span class="new">(new&#160;217)</span>,
+        IMap.java&#160;<span class="change">(+3&#160;-1)</span>,
+        IdentityArrayMap.java&#160;<span class="change">(+6)</span>,
+        IdentityHashtableMap.java&#160;<span class="new">(new&#160;38)</span>,
+        PersistentHashMap.java&#160;<span class="new">(new&#160;100)</span>,
+        RBTree.java&#160;<span class="change">(+15&#160;-9)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="16"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-05 21:08</span>
+    <a class="permalink" title="Permalink to this commit" href="#16">#16</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">120</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed array copy in put
+    </p>
+    <p class="commitdetails"><strong>4</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        ArrayMap.java&#160;<span class="change">(+4&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="15"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-05 20:10</span>
+    <a class="permalink" title="Permalink to this commit" href="#15">#15</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">119</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Added IMap, IMapEntry, ArrayMaps
+    </p>
+    <p class="commitdetails"><strong>257</strong> lines of code changed in <span class="files">5 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        ArrayMap.java&#160;<span class="new">(new&#160;164)</span>,
+        IMap.java&#160;<span class="new">(new&#160;29)</span>,
+        IMapEntry.java&#160;<span class="new">(new&#160;17)</span>,
+        IdentityArrayMap.java&#160;<span class="new">(new&#160;21)</span>,
+        RBTree.java&#160;<span class="change">(+26&#160;-22)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="14"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-05 18:25</span>
+    <a class="permalink" title="Permalink to this commit" href="#14">#14</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">118</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+distinguished inner/leaf entries
+    </p>
+    <p class="commitdetails"><strong>72</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="change">(+45&#160;-21)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentArray.java&#160;<span class="change">(+27&#160;-6)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="13"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-05 16:04</span>
+    <a class="permalink" title="Permalink to this commit" href="#13">#13</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">117</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+storing loadFactor
+    </p>
+    <p class="commitdetails"><strong>13</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="change">(+6&#160;-4)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentArray.java&#160;<span class="change">(+7&#160;-5)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="12"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-05 15:47</span>
+    <a class="permalink" title="Permalink to this commit" href="#12">#12</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">116</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added load factor, improved docs, java/cs in sync
+    </p>
+    <p class="commitdetails"><strong>45</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="change">(+44&#160;-12)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentArray.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="11"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-05 14:28</span>
+    <a class="permalink" title="Permalink to this commit" href="#11">#11</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">115</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added loadFactor, better docs
+    </p>
+    <p class="commitdetails"><strong>39</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentArray.java&#160;<span class="change">(+39&#160;-13)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="10"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-03 20:35</span>
+    <a class="permalink" title="Permalink to this commit" href="#10">#10</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">114</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+brought compiler and runtime back in sync
+    </p>
+    <p class="commitdetails"><strong>28</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        Accessor.cs&#160;<span class="change">(+10&#160;-8)</span>
+      </li>
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+9&#160;-33)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        Accessor.java&#160;<span class="change">(+9&#160;-8)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="9"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-03 17:44</span>
+    <a class="permalink" title="Permalink to this commit" href="#9">#9</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">113</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added has, resize, load, and isolate
+    </p>
+    <p class="commitdetails"><strong>96</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="change">(+40&#160;-2)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentArray.java&#160;<span class="change">(+56&#160;-6)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="8"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-03 16:02</span>
+    <a class="permalink" title="Permalink to this commit" href="#8">#8</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">112</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made RT.Iter support Iterables, removed iter from Cons, made RBTree Iterable
+    </p>
+    <p class="commitdetails"><strong>4</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        Cons.java&#160;<span class="change">(-4)</span>,
+        RBTree.java&#160;<span class="change">(+1&#160;-1)</span>,
+        RT.java&#160;<span class="change">(+3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="7"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-03 15:55</span>
+    <a class="permalink" title="Permalink to this commit" href="#7">#7</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">111</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+got rid of clone in TVal
+    </p>
+    <p class="commitdetails"><strong>30</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        TVal.cs&#160;<span class="change">(+15&#160;-3)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        TVal.java&#160;<span class="change">(+15&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="6"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-03 15:48</span>
+    <a class="permalink" title="Permalink to this commit" href="#6">#6</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">110</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+commented out one Main entry point
+    </p>
+    <p class="commitdetails"><strong>3</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="change">(+1)</span>,
+        RBTree.cs&#160;<span class="change">(+2&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="5"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-03 15:08</span>
+    <a class="permalink" title="Permalink to this commit" href="#5">#5</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">109</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed use of BitArray
+    </p>
+    <p class="commitdetails"><strong>5</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="change">(+5&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="4"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-02 20:40</span>
+    <a class="permalink" title="Permalink to this commit" href="#4">#4</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">108</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made not Cloneable for the moment
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentArray.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="3"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-02 20:39</span>
+    <a class="permalink" title="Permalink to this commit" href="#3">#3</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">107</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+first cut at port - broken because BitArray != BitSet
+    </p>
+    <p class="commitdetails"><strong>2</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        PersistentArray.cs&#160;<span class="new">(new&#160;2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="2"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-02 18:52</span>
+    <a class="permalink" title="Permalink to this commit" href="#2">#2</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">106</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+first pass at PersistentArray
+    </p>
+    <p class="commitdetails"><strong>6</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        PersistentArray.java&#160;<span class="new">(new&#160;6)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="1"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-02 03:21</span>
+    <a class="permalink" title="Permalink to this commit" href="#1">#1</a>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">105</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added support for reader
+    </p>
+    <p class="commitdetails"><strong>384</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/cli/runtime</strong>:
+        LineNumberingTextReader.cs&#160;<span class="new">(new&#160;57)</span>,
+        RT.cs&#160;<span class="change">(+53&#160;-2)</span>
+      </li>
+      <li>
+        <strong>src/org/clojure/runtime</strong>:
+        LineNumberingPushbackReader.java&#160;<span class="new">(new&#160;27)</span>,
+        RT.java&#160;<span class="change">(+247&#160;-186)</span>
+      </li>
+    </ul>
+  </dd>
+
+</dl>
+
+<p class="previous"><a href="2006-05.html">May 2006</a> &#187; </p>
+<div id="generatedby">Generated by <a href="http://www.statsvn.org">StatSVN</a> 0.7.0</div>
+</body>
+</html>

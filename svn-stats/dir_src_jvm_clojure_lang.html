@@ -1,0 +1,938 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>StatSVN - Directory src/jvm/clojure/lang/</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <meta name="Generator" content="StatSVN 0.7.0"/>
+<link rel="stylesheet" href="objectlab-statcvs.css" type="text/css"/>
+<script type="text/javascript" charset="utf-8" src="http://bit.ly/javascript-api.js?version=latest&#38;login=statsvn&#38;apiKey=R_2c362b417d0517c27876cbaca1bb68cc"></script>
+<script type="text/javascript" charset="utf-8">
+   // wait until page is loaded to call API
+   var redir_url;
+   var short_url;
+   BitlyCB.myShortenCallback = function(data) {
+      // this is how to get a result of shortening a single url
+      var result;
+      short_url=null;
+      for (var r in data.results) {
+         result = data.results[r];
+         result['longUrl'] = r;
+         short_url = result['shortUrl'];
+         break;
+      }
+      if (short_url==null) // bit.ly failed
+      document.location=redir_url;
+      else
+      redirToTwitter();
+   };
+   function shortenTweet(url) {
+      if (short_url == null || redir_url!=url) {
+      redir_url = url;
+      BitlyClient.shorten(document.location, 'BitlyCB.myShortenCallback');
+      }
+      else
+      redirToTwitter();
+      return false;
+   }
+   function redirToTwitter() { 
+      // replace {0} which is visible as %7B0} in the link
+      document.location = redir_url.replace('%7B0}', short_url);
+   }
+</script>
+  </head>
+
+<body>
+
+<h1>Directory src/jvm/clojure/lang/</h1>
+<div id="parentlink">&#171; <a href="index.html">Development Statistics for /trunk</a></div>
+<dl class="attributes">
+    <dt>Total Files:</dt>
+    <dd>83</dd>
+    <dt>Deleted Files:</dt>
+    <dd>63</dd>
+    <dt>Lines of Code:</dt>
+    <dd>23704</dd>
+</dl>
+<p class="dirtree">
+<a href="dir.html">[root]</a>/<a href="dir_src.html">src</a>/<a href="dir_src_jvm.html">jvm</a>/<a href="dir_src_jvm_clojure.html">clojure</a>/<strong>lang</strong><br/>
+</p>
+
+<div class="section">
+<h2>Lines of Code</h2>
+<p class="chart"><img src="loc_module_src_jvm_clojure_lang.png" alt="src/jvm/clojure/lang/ Lines of Code" width="800" height="500" /></p></div>
+<div class="section">
+<h2>Developers</h2>
+  <table  rules="groups" summary="All authors and the number of their changes and lines of code in this directory">
+    <colgroup align="left"/>
+    <colgroup align="right"/>
+    <colgroup align="right"/>
+    <colgroup align="right"/>
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Changes</th>
+        <th>Lines of Code</th>
+        <th>Lines per Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  class="odd">
+        <th><a href="user_rhickey.html" class="author">rhickey</a></th>
+        <td>1736 (100.0%)</td>
+        <td>55998 (100.0%)</td>
+        <td>32.2</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<div class="section">
+<h2>Most Recent Commits</h2>
+<dl class="commitlist">
+  <dt><a name="40"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-16 15:10</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1162</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+EPL in header
+    </p>
+    <p class="commitdetails"><strong>2</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        AFunction.java&#160;<span class="change">(+2&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="39"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-16 14:28</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1161</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+refactored Comparator into superclass of functions only
+    </p>
+    <p class="commitdetails"><strong>51</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        AFn.java&#160;<span class="change">(+1&#160;-20)</span>,
+        AFunction.java&#160;<span class="new">(new&#160;47)</span>,
+        Compiler.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="38"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-14 21:01</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1160</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Moved to Eclipse Public License  - see epl-v10.html or<br />
+<a href="http://opensource.org/licenses/eclipse">http://opensource.org/licenses/eclipse</a>-1.0.php
+    </p>
+    <p class="commitdetails"><strong>160</strong> lines of code changed in <span class="files">80 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        AFn.java&#160;<span class="change">(+2&#160;-2)</span>,
+        AMapEntry.java&#160;<span class="change">(+2&#160;-2)</span>,
+        APersistentMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        APersistentSet.java&#160;<span class="change">(+2&#160;-2)</span>,
+        APersistentVector.java&#160;<span class="change">(+2&#160;-2)</span>,
+        ASeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Agent.java&#160;<span class="change">(+2&#160;-2)</span>,
+        ArraySeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        ArrayStream.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Associative.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Binding.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Box.java&#160;<span class="change">(+2&#160;-2)</span>,
+        CachedSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Compile.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Compiler.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Cons.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Delay.java&#160;<span class="change">(+2&#160;-2)</span>,
+        DynamicClassLoader.java&#160;<span class="change">(+2&#160;-2)</span>,
+        EnumerationSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Fn.java&#160;<span class="change">(+2&#160;-2)</span>,
+        FnSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IFn.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IMapEntry.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IObj.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IPersistentCollection.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IPersistentList.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IPersistentMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IPersistentSet.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IPersistentStack.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IPersistentVector.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IProxy.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IReduce.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IRef.java&#160;<span class="change">(+2&#160;-2)</span>,
+        ISeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IStream.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IndexedSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IteratorSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IteratorStream.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Keyword.java&#160;<span class="change">(+2&#160;-2)</span>,
+        LazilyPersistentVector.java&#160;<span class="change">(+2&#160;-2)</span>,
+        LazyCons.java&#160;<span class="change">(+2&#160;-2)</span>,
+        LazySeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        LineNumberingPushbackReader.java&#160;<span class="change">(+2&#160;-2)</span>,
+        LispReader.java&#160;<span class="change">(+2&#160;-2)</span>,
+        LockingTransaction.java&#160;<span class="change">(+2&#160;-2)</span>,
+        MapEntry.java&#160;<span class="change">(+2&#160;-2)</span>,
+        MultiFn.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Named.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Namespace.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Numbers.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Obj.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentArrayMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentHashSet.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentList.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentQueue.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentStructMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentTreeMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentTreeSet.java&#160;<span class="change">(+2&#160;-2)</span>,
+        ProxyHandler.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RT.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Range.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Ratio.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Ref.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Reflector.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Repl.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Reversible.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Script.java&#160;<span class="change">(+2&#160;-2)</span>,
+        SeqEnumeration.java&#160;<span class="change">(+2&#160;-2)</span>,
+        SeqIterator.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Sequential.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Sorted.java&#160;<span class="change">(+2&#160;-2)</span>,
+        StreamSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Streamable.java&#160;<span class="change">(+2&#160;-2)</span>,
+        StringSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Symbol.java&#160;<span class="change">(+2&#160;-2)</span>,
+        TransactionalHashMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Util.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Var.java&#160;<span class="change">(+2&#160;-2)</span>,
+        XMLHandler.java&#160;<span class="change">(+2&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="37"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-13 20:25</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1159</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+proxy perf tweaks<br />
+Note breaking change if you are using the proxy interface other than the proxy macro itself - proxy maps are now maps of (preferably interned) strings to fns, not symbols to fns, and if you construct a proxy manually you must establish initial map with init-proxy
+    </p>
+    <p class="commitdetails"><strong>7</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        IProxy.java&#160;<span class="change">(+3&#160;-2)</span>,
+        PersistentArrayMap.java&#160;<span class="change">(+1&#160;-1)</span>,
+        RT.java&#160;<span class="change">(+3&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="36"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-13 03:37</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1158</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+force instance member interpretation of (.method ClassName), e.g. (.getMethods String) works
+    </p>
+    <p class="commitdetails"><strong>7</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+7&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="35"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-12 23:37</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1157</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+removed sharing in registerConstant
+    </p>
+    <p class="commitdetails"><strong>0</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="34"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-12 21:00</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1156</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed tagToClass for chars
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="33"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-12 17:46</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1155</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+check for static field in classname/fieldname
+    </p>
+    <p class="commitdetails"><strong>2</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+2&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="32"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-12 04:29</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1154</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+emit string constants directly
+    </p>
+    <p class="commitdetails"><strong>45</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+45&#160;-22)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="31"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-11 21:27</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1153</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+release coll on nth of seq, stream work in progress
+    </p>
+    <p class="commitdetails"><strong>373</strong> lines of code changed in <span class="files">8 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        APersistentVector.java&#160;<span class="change">(+15&#160;-2)</span>,
+        ASeq.java&#160;<span class="change">(+23&#160;-1)</span>,
+        ArrayStream.java&#160;<span class="new">(new&#160;194)</span>,
+        IStream.java&#160;<span class="new">(new&#160;17)</span>,
+        IteratorStream.java&#160;<span class="new">(new&#160;29)</span>,
+        Range.java&#160;<span class="change">(+14&#160;-1)</span>,
+        StreamSeq.java&#160;<span class="new">(new&#160;64)</span>,
+        Streamable.java&#160;<span class="new">(new&#160;17)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="30"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-11 21:20</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1152</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+release coll on nth of seq
+    </p>
+    <p class="commitdetails"><strong>45</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        RT.java&#160;<span class="change">(+45&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="29"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-11 15:28</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1151</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added if-not, memoize, and io!<br />
+io! blocks will throw exceptions when run in transactions<br />
+made await and await-for use io!
+    </p>
+    <p class="commitdetails"><strong>4</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        LockingTransaction.java&#160;<span class="change">(+4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="28"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-08 02:44</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1147</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added unchecked-remainder
+    </p>
+    <p class="commitdetails"><strong>8</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Numbers.java&#160;<span class="change">(+8)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="27"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-07 15:14</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1146</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added doc string for *agent*
+    </p>
+    <p class="commitdetails"><strong>3</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        RT.java&#160;<span class="change">(+3&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="26"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-05 01:19</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1145</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made RT.DEFAULT_COMPARATOR use Util.compare
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        RT.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="25"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-04 13:53</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1144</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made APersistenVector.compareTo use Util.compare on elements
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        APersistentVector.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="24"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-02 18:05</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1137</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+moved array tag names out of maybeClass
+    </p>
+    <p class="commitdetails"><strong>24</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+24&#160;-17)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="23"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-01 17:53</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1133</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made RT.loadClassForName check that forName exception is its own, or let it flow out
+    </p>
+    <p class="commitdetails"><strong>4</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        RT.java&#160;<span class="change">(+4&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="22"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-01 03:40</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1132</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+AOT compilation of proxies, no interface change
+    </p>
+    <p class="commitdetails"><strong>4</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        RT.java&#160;<span class="change">(+4&#160;-5)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="21"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-29 19:42</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1129</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+enhancements to AOT/gen-class<br />
+AOT now only produces __init.class by default, load uses that class only<br />
+must have at least (:gen-class) ns clause to create named class for ns<br />
+gen-class can now be called stand-alone<br />
+new options allow for control of mapping to implementing namespace,<br />
+name of class, loading of implementing namespace, and method name prefix<br />
+(doc ns) and (doc gen-class) and <a href="http://clojure.org/compilation">http://clojure.org/compilation</a> for details<br />
+
+    </p>
+    <p class="commitdetails"><strong>15</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compile.java&#160;<span class="change">(+6&#160;-8)</span>,
+        Compiler.java&#160;<span class="change">(+4&#160;-54)</span>,
+        RT.java&#160;<span class="change">(+5&#160;-144)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="20"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-28 18:52</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1128</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+create child dirs of *compile-path* but not *compile-path* itself
+    </p>
+    <p class="commitdetails"><strong>7</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+7&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="19"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-27 00:57</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1127</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added clojure.main, patch from Stephen C. Gilardi
+    </p>
+    <p class="commitdetails"><strong>71</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compile.java&#160;<span class="new">(new&#160;71)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="18"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-25 14:51</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1122</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Added Fn marker interfaced, used on all true fns<br />
+Breaking change - fn? now tests for Fn, not IFn<br />
+Added ifn? which will test for anything callable (IFn)<br />
+Added trampoline, implements trampoline protocol for TCO<br />
+
+    </p>
+    <p class="commitdetails"><strong>17</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+1&#160;-1)</span>,
+        Fn.java&#160;<span class="new">(new&#160;16)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="17"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-21 18:11</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1121</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made some helpers classes public
+    </p>
+    <p class="commitdetails"><strong>18</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        LispReader.java&#160;<span class="change">(+18&#160;-18)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="16"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-20 19:44</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1120</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed resolving keywords, smap when no source
+    </p>
+    <p class="commitdetails"><strong>21</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+14&#160;-11)</span>,
+        LispReader.java&#160;<span class="change">(+7&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="15"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-20 17:56</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1119</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+enhanced bridge method handling
+    </p>
+    <p class="commitdetails"><strong>26</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Reflector.java&#160;<span class="change">(+26&#160;-14)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="14"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-20 15:57</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1117</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+moved getCompiledClass to emit
+    </p>
+    <p class="commitdetails"><strong>3</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+3&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="13"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-20 14:08</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1116</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+do -/_ translation in compare to namespace name, patch from Chouser
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="12"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-20 02:45</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1114</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed lpv toArray, patch from Chouser
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        LazilyPersistentVector.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="11"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-19 21:40</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1113</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+use source name in smap
+    </p>
+    <p class="commitdetails"><strong>7</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+7&#160;-4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="10"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-19 20:16</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1112</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+prepRet on Array.get calls to fixup non-canonic Booleans
+    </p>
+    <p class="commitdetails"><strong>13</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        ArraySeq.java&#160;<span class="change">(+5&#160;-5)</span>,
+        RT.java&#160;<span class="change">(+3&#160;-3)</span>,
+        Reflector.java&#160;<span class="change">(+5&#160;-5)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="9"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-18 20:46</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1110</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Added AOT-based genclass<br />
+!!!Note - breaking change to gen-class!!!<br />
+Do not move to this version if you use gen-and-xxx-class until you are ready to port to new system.<br />
+Adds :gen-class clause to ns, which can be used to configure the class generated for the namespace
+    </p>
+    <p class="commitdetails"><strong>67</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+57&#160;-21)</span>,
+        RT.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Var.java&#160;<span class="change">(+8)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="8"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-18 12:28</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1109</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made pushNS public
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="7"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-18 04:30</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1108</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+AOT init refinements
+    </p>
+    <p class="commitdetails"><strong>47</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+34&#160;-9)</span>,
+        RT.java&#160;<span class="change">(+13&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="6"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-17 21:32</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1107</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed containsAll
+    </p>
+    <p class="commitdetails"><strong>6</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        APersistentVector.java&#160;<span class="change">(+3&#160;-3)</span>,
+        ASeq.java&#160;<span class="change">(+3&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="5"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-16 14:51</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1106</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made #! a to-end-of-line comment, like ;
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        LispReader.java&#160;<span class="change">(+1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="4"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-15 18:07</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1105</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added load to AOT generated main
+    </p>
+    <p class="commitdetails"><strong>3</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="3"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-15 16:10</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1104</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added static main() support for AOT. Just defn main in your ns, will be applied to command line string args
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+1&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="2"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-15 16:07</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1103</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed Namespace toString
+    </p>
+    <p class="commitdetails"><strong>19</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+18&#160;-18)</span>,
+        Var.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="1"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-14 22:10</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1102</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+started work on AOT main() support
+    </p>
+    <p class="commitdetails"><strong>19</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+19)</span>
+      </li>
+    </ul>
+  </dd>
+
+</dl>
+
+<p>(680 more)</p>
+</div><div id="generatedby">Generated by <a href="http://www.statsvn.org">StatSVN</a> 0.7.0</div>
+</body>
+</html>

@@ -1,0 +1,939 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>StatSVN - Directory src/clj/clojure/</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <meta name="Generator" content="StatSVN 0.7.0"/>
+<link rel="stylesheet" href="objectlab-statcvs.css" type="text/css"/>
+<script type="text/javascript" charset="utf-8" src="http://bit.ly/javascript-api.js?version=latest&#38;login=statsvn&#38;apiKey=R_2c362b417d0517c27876cbaca1bb68cc"></script>
+<script type="text/javascript" charset="utf-8">
+   // wait until page is loaded to call API
+   var redir_url;
+   var short_url;
+   BitlyCB.myShortenCallback = function(data) {
+      // this is how to get a result of shortening a single url
+      var result;
+      short_url=null;
+      for (var r in data.results) {
+         result = data.results[r];
+         result['longUrl'] = r;
+         short_url = result['shortUrl'];
+         break;
+      }
+      if (short_url==null) // bit.ly failed
+      document.location=redir_url;
+      else
+      redirToTwitter();
+   };
+   function shortenTweet(url) {
+      if (short_url == null || redir_url!=url) {
+      redir_url = url;
+      BitlyClient.shorten(document.location, 'BitlyCB.myShortenCallback');
+      }
+      else
+      redirToTwitter();
+      return false;
+   }
+   function redirToTwitter() { 
+      // replace {0} which is visible as %7B0} in the link
+      document.location = redir_url.replace('%7B0}', short_url);
+   }
+</script>
+  </head>
+
+<body>
+
+<h1>Directory src/clj/clojure/</h1>
+<div id="parentlink">&#171; <a href="index.html">Development Statistics for /trunk</a></div>
+<dl class="attributes">
+    <dt>Directory Created:</dt>
+    <dd><span class="date">2008-07-29 17:46</span></dd>
+    <dt>Total Files:</dt>
+    <dd>10</dd>
+    <dt>Deleted Files:</dt>
+    <dd>4</dd>
+    <dt>Lines of Code:</dt>
+    <dd>6105</dd>
+</dl>
+<p class="dirtree">
+<a href="dir.html">[root]</a>/<a href="dir_src.html">src</a>/<a href="dir_src_clj.html">clj</a>/<strong>clojure</strong><br/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="folder-deleted.png" width="15" height="13" alt="Folder removed from repo" title="Folder removed from repo"/> 
+<a href="dir_src_clj_clojure_inspector.html">inspector</a> 
+(0 files, 0 lines)<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="folder-deleted.png" width="15" height="13" alt="Folder removed from repo" title="Folder removed from repo"/> 
+<a href="dir_src_clj_clojure_parallel.html">parallel</a> 
+(0 files, 0 lines)<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="folder-deleted.png" width="15" height="13" alt="Folder removed from repo" title="Folder removed from repo"/> 
+<a href="dir_src_clj_clojure_set.html">set</a> 
+(0 files, 0 lines)<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="folder-deleted.png" width="15" height="13" alt="Folder removed from repo" title="Folder removed from repo"/> 
+<a href="dir_src_clj_clojure_xml.html">xml</a> 
+(0 files, 0 lines)<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="folder-deleted.png" width="15" height="13" alt="Folder removed from repo" title="Folder removed from repo"/> 
+<a href="dir_src_clj_clojure_zip.html">zip</a> 
+(0 files, 0 lines)<br />
+</p>
+
+<div class="section">
+<h2>Lines of Code</h2>
+<p class="chart"><img src="loc_module_src_clj_clojure.png" alt="src/clj/clojure/ Lines of Code" width="800" height="500" /></p></div>
+<div class="section">
+<h2>Developers</h2>
+  <table  rules="groups" summary="All authors and the number of their changes and lines of code in this directory">
+    <colgroup align="left"/>
+    <colgroup align="right"/>
+    <colgroup align="right"/>
+    <colgroup align="right"/>
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Changes</th>
+        <th>Lines of Code</th>
+        <th>Lines per Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  class="odd">
+        <th><a href="user_rhickey.html" class="author">rhickey</a></th>
+        <td>139 (100.0%)</td>
+        <td>12735 (100.0%)</td>
+        <td>91.6</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<div class="section">
+<h2>Most Recent Commits</h2>
+<dl class="commitlist">
+  <dt><a name="40"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-14 21:01</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1160</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Moved to Eclipse Public License  - see epl-v10.html or<br />
+<a href="http://opensource.org/licenses/eclipse">http://opensource.org/licenses/eclipse</a>-1.0.php
+    </p>
+    <p class="commitdetails"><strong>20</strong> lines of code changed in <span class="files">11 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        core_print.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        core_proxy.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        genclass.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        inspector.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        main.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        parallel.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        proxy.clj&#160;<span class="del">(del)</span>,
+        set.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        xml.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        zip.clj&#160;<span class="change">(+2&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="39"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-13 20:25</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1159</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+proxy perf tweaks<br />
+Note breaking change if you are using the proxy interface other than the proxy macro itself - proxy maps are now maps of (preferably interned) strings to fns, not symbols to fns, and if you construct a proxy manually you must establish initial map with init-proxy
+    </p>
+    <p class="commitdetails"><strong>31</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core_proxy.clj&#160;<span class="change">(+31&#160;-17)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="38"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-11 15:28</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1151</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added if-not, memoize, and io!<br />
+io! blocks will throw exceptions when run in transactions<br />
+made await and await-for use io!
+    </p>
+    <p class="commitdetails"><strong>42</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+42&#160;-8)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="37"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-10 23:54</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1150</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+releaxed namespace requirement for derives in private hierarchy, patch from J. McConnell
+    </p>
+    <p class="commitdetails"><strong>6</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+6&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="36"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-10 01:17</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1149</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added :exposes-methods to gen-class, patch from Matt Revelle
+    </p>
+    <p class="commitdetails"><strong>27</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        genclass.clj&#160;<span class="change">(+27&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="35"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-09 15:36</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1148</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+support :when and :while together in for, patch from Chouser
+    </p>
+    <p class="commitdetails"><strong>32</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+32&#160;-36)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="34"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-08 02:44</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1147</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added unchecked-remainder
+    </p>
+    <p class="commitdetails"><strong>6</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+6)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="33"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-05 01:19</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1145</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made RT.DEFAULT_COMPARATOR use Util.compare
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="32"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-04 13:46</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1143</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+swap! returns new value
+    </p>
+    <p class="commitdetails"><strong>5</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core_proxy.clj&#160;<span class="change">(+5&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="31"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-03 15:34</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1142</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+renamed clojure-print.clj, clojure-proxy.clj to clojure_...
+    </p>
+    <p class="commitdetails"><strong>700</strong> lines of code changed in <span class="files">5 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core-print.clj&#160;<span class="del">(del)</span>,
+        core-proxy.clj&#160;<span class="del">(del)</span>,
+        core.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        core_print.clj&#160;<span class="new">(new&#160;321)</span>,
+        core_proxy.clj&#160;<span class="new">(new&#160;377)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="30"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-03 13:43</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1141</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+expose inherited protected fields that originate from farther<br />
+up the hierarchy than the super class, patch from Matt Revelle
+    </p>
+    <p class="commitdetails"><strong>10</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        genclass.clj&#160;<span class="change">(+10&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="29"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-03 13:25</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1140</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed doc for main/repl
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        main.clj&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="28"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-02 20:59</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1139</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+use prn as default print in main
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        main.clj&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="27"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-02 20:19</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1138</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+short print-dup for LazilyPersistenVectors<br />
+made re-pattern identity for patterns, now find-doc works with patterns too
+    </p>
+    <p class="commitdetails"><strong>7</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core-print.clj&#160;<span class="change">(+1)</span>,
+        core.clj&#160;<span class="change">(+6&#160;-4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="26"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-02 15:24</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1136</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed typo in deref doc
+    </p>
+    <p class="commitdetails"><strong>5</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+5&#160;-5)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="25"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-02 14:56</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1135</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Enhanced bigdec/bigint, no op on same type, coerce floats and ints, support single-args ctors, e.g. from String<br />
+enhanced docs for deref/get- and set-validator for var/atom
+    </p>
+    <p class="commitdetails"><strong>47</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+47&#160;-37)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="24"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-02 01:36</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1134</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added new reference type - Atom, with constructor function atom, swap!, and compare-and-set!<br />
+Atoms implement IRef, and thus deref/@ and validators<br />
+Atoms provide independent, synchronous change of individual locations<br />
+
+    </p>
+    <p class="commitdetails"><strong>80</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core-proxy.clj&#160;<span class="change">(+80&#160;-25)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="23"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-01 03:40</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1132</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+AOT compilation of proxies, no interface change
+    </p>
+    <p class="commitdetails"><strong>185</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core-proxy.clj&#160;<span class="change">(+185&#160;-172)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="22"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-30 13:58</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1131</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made nested load of already loading resource a no-op instead of a throw
+    </p>
+    <p class="commitdetails"><strong>6</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+6&#160;-5)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="21"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-29 23:26</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1130</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added gen-interface
+    </p>
+    <p class="commitdetails"><strong>75</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        genclass.clj&#160;<span class="change">(+75&#160;-60)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="20"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-29 19:42</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1129</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+enhancements to AOT/gen-class<br />
+AOT now only produces __init.class by default, load uses that class only<br />
+must have at least (:gen-class) ns clause to create named class for ns<br />
+gen-class can now be called stand-alone<br />
+new options allow for control of mapping to implementing namespace,<br />
+name of class, loading of implementing namespace, and method name prefix<br />
+(doc ns) and (doc gen-class) and <a href="http://clojure.org/compilation">http://clojure.org/compilation</a> for details<br />
+
+    </p>
+    <p class="commitdetails"><strong>177</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+20&#160;-10)</span>,
+        genclass.clj&#160;<span class="change">(+156&#160;-127)</span>,
+        main.clj&#160;<span class="change">(+1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="19"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-27 00:57</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1127</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added clojure.main, patch from Stephen C. Gilardi
+    </p>
+    <p class="commitdetails"><strong>231</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        main.clj&#160;<span class="new">(new&#160;231)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="18"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-27 00:13</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1126</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+tweaked docs<br />
+added while
+    </p>
+    <p class="commitdetails"><strong>36</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+22&#160;-4)</span>,
+        genclass.clj&#160;<span class="change">(+14&#160;-12)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="17"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-26 14:35</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1125</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added intern
+    </p>
+    <p class="commitdetails"><strong>18</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+18&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="16"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-26 14:08</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1124</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made prefer-method and remove-method functions
+    </p>
+    <p class="commitdetails"><strong>4</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+4&#160;-4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="15"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-25 17:06</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1123</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed doc string on trampoline, added support for passing args
+    </p>
+    <p class="commitdetails"><strong>14</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+14&#160;-11)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="14"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-25 14:51</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1122</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Added Fn marker interfaced, used on all true fns<br />
+Breaking change - fn? now tests for Fn, not IFn<br />
+Added ifn? which will test for anything callable (IFn)<br />
+Added trampoline, implements trampoline protocol for TCO<br />
+
+    </p>
+    <p class="commitdetails"><strong>17</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+17&#160;-4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="13"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-20 17:56</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1119</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+enhanced bridge method handling
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="12"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-20 16:40</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1118</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made cond refer to itself explicitly
+    </p>
+    <p class="commitdetails"><strong>2</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+2&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="11"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-20 02:52</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1115</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+got rid of scan and touch
+    </p>
+    <p class="commitdetails"><strong>0</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="10"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-19 20:16</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1112</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+prepRet on Array.get calls to fixup non-canonic Booleans
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="9"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-19 16:17</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1111</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+enhanced doto now supports functions as well as methods<br />
+!! Note - breaking change - you must now use .method instead of just method:<br />
+(def frame (doto (new JFrame) (add panel) pack show))<br />
+becomes:<br />
+(def frame (doto (new JFrame) (.add panel) .pack .show))
+    </p>
+    <p class="commitdetails"><strong>45</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+10&#160;-7)</span>,
+        inspector.clj&#160;<span class="change">(+35&#160;-36)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="8"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-18 20:46</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1110</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Added AOT-based genclass<br />
+!!!Note - breaking change to gen-class!!!<br />
+Do not move to this version if you use gen-and-xxx-class until you are ready to port to new system.<br />
+Adds :gen-class clause to ns, which can be used to configure the class generated for the namespace
+    </p>
+    <p class="commitdetails"><strong>55</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+7&#160;-5)</span>,
+        genclass.clj&#160;<span class="change">(+48&#160;-21)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="7"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-18 04:30</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1108</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+AOT init refinements
+    </p>
+    <p class="commitdetails"><strong>4</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+4&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="6"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-14 19:40</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1100</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed print-dup on empty list
+    </p>
+    <p class="commitdetails"><strong>3</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core-print.clj&#160;<span class="change">(+3&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="5"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-13 16:55</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1097</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made (keyword :akeyword) and (symbol 'asymbol) == identity
+    </p>
+    <p class="commitdetails"><strong>11</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+11&#160;-9)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="4"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-13 14:17</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1096</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made integer? return true for Bytes and Shorts
+    </p>
+    <p class="commitdetails"><strong>3</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+3&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="3"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-12 21:59</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1094</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+AOT compiler support<br />
+breaking change to load - no longer takes extension<br />
+load will load from classfile if newer than source<br />
+to compile, source dir and compile dir must be in classpath<br />
+(compile 'my.cool.ns)<br />
+will compile my/cool/ns.clj and anything it loads directly or indirectly
+    </p>
+    <p class="commitdetails"><strong>640</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core-print.clj&#160;<span class="new">(new&#160;318)</span>,
+        core-proxy.clj&#160;<span class="new">(new&#160;309)</span>,
+        core.clj&#160;<span class="change">(+13&#160;-611)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="2"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-11 00:43</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1093</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Interim checkin - DO NOT USE!!<br />
+Unless you are interested in helping test:<br />
+AOT compiler!<br />
+  build and start Clojure with: -cp ./classes:./src/clj:clojure.jar<br />
+  try:<br />
+ (do<br />
+  (compile 'clojure.core)<br />
+  (compile 'clojure.set)<br />
+  (compile 'clojure.xml)<br />
+  (compile 'clojure.zip))<br />
+  restart Clojure - faster?<br />
+  rebuild Clojure w/o clean, should get faster start from jar alone<br />
+deleted set/xml etc dirs<br />
+Moved clojure ns to clojure.core, moved set/xml etc up out of dirs<br />
+New binding syntax (breaking change) for:<br />
+  doseq<br />
+  dotimes<br />
+  with-open<br />
+  when-first<br />
+  if-let<br />
+  when-let <br />
+plus:<br />
+new print-dup functionality for replica generation of compilation constants<br />
+new *print-dup* flag, prints duplicators<br />
+back to simplified readably printing for repl<br />
+readable fns, as long as they are not closures
+    </p>
+    <p class="commitdetails"><strong>313</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+311&#160;-4)</span>,
+        inspector.clj&#160;<span class="change">(+2&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="1"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-11-08 19:53</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1091</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Interim checkin - DO NOT USE!!<br />
+Unless you are interested in helping test:<br />
+Moved clojure ns to clojure.core, moved set/xml etc up out of dirs<br />
+New binding syntax (breaking change) for:<br />
+  doseq<br />
+  dotimes<br />
+  with-open<br />
+  when-first<br />
+  if-let<br />
+  when-let <br />
+plus:<br />
+new print-dup functionality for replica generation of compilation constants<br />
+new *print-dup* flag, prints duplicators<br />
+back to simplified readably printing for repl<br />
+readable fns, as long as they are not closures
+    </p>
+    <p class="commitdetails"><strong>4698</strong> lines of code changed in <span class="files">9 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        boot.clj&#160;<span class="del">(del)</span>,
+        core.clj&#160;<span class="new">(new&#160;3789)</span>,
+        genclass.clj&#160;<span class="change">(+1&#160;-1)</span>,
+        inspector.clj&#160;<span class="new">(new&#160;181)</span>,
+        parallel.clj&#160;<span class="new">(new&#160;248)</span>,
+        proxy.clj&#160;<span class="change">(+1&#160;-1)</span>,
+        set.clj&#160;<span class="new">(new&#160;115)</span>,
+        xml.clj&#160;<span class="new">(new&#160;115)</span>,
+        zip.clj&#160;<span class="new">(new&#160;248)</span>
+      </li>
+    </ul>
+  </dd>
+
+</dl>
+
+<p>(64 more)</p>
+</div><div id="generatedby">Generated by <a href="http://www.statsvn.org">StatSVN</a> 0.7.0</div>
+</body>
+</html>

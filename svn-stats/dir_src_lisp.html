@@ -1,0 +1,738 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>StatSVN - Directory src/lisp/</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <meta name="Generator" content="StatSVN 0.7.0"/>
+<link rel="stylesheet" href="objectlab-statcvs.css" type="text/css"/>
+<script type="text/javascript" charset="utf-8" src="http://bit.ly/javascript-api.js?version=latest&#38;login=statsvn&#38;apiKey=R_2c362b417d0517c27876cbaca1bb68cc"></script>
+<script type="text/javascript" charset="utf-8">
+   // wait until page is loaded to call API
+   var redir_url;
+   var short_url;
+   BitlyCB.myShortenCallback = function(data) {
+      // this is how to get a result of shortening a single url
+      var result;
+      short_url=null;
+      for (var r in data.results) {
+         result = data.results[r];
+         result['longUrl'] = r;
+         short_url = result['shortUrl'];
+         break;
+      }
+      if (short_url==null) // bit.ly failed
+      document.location=redir_url;
+      else
+      redirToTwitter();
+   };
+   function shortenTweet(url) {
+      if (short_url == null || redir_url!=url) {
+      redir_url = url;
+      BitlyClient.shorten(document.location, 'BitlyCB.myShortenCallback');
+      }
+      else
+      redirToTwitter();
+      return false;
+   }
+   function redirToTwitter() { 
+      // replace {0} which is visible as %7B0} in the link
+      document.location = redir_url.replace('%7B0}', short_url);
+   }
+</script>
+  </head>
+
+<body>
+
+<h1>Directory src/lisp/</h1>
+<div id="parentlink">&#171; <a href="index.html">Development Statistics for /trunk</a></div>
+<dl class="attributes">
+    <dt>Directory Created:</dt>
+    <dd><span class="date">2006-04-11 23:00</span></dd>
+    <dt>Directory Deleted:</dt>
+    <dd><span class="date">2007-09-22 23:32</span></dd>
+    <dt>Total Files:</dt>
+    <dd>0</dd>
+    <dt>Deleted Files:</dt>
+    <dd>3</dd>
+    <dt>Lines of Code:</dt>
+    <dd>0</dd>
+</dl>
+<p class="dirtree">
+<a href="dir.html">[root]</a>/<a href="dir_src.html">src</a>/<strong>lisp</strong><br/>
+</p>
+
+<div class="section">
+<h2>Lines of Code</h2>
+<p class="chart"><img src="loc_module_src_lisp.png" alt="src/lisp/ Lines of Code" width="800" height="500" /></p></div>
+<div class="section">
+<h2>Developers</h2>
+  <table  rules="groups" summary="All authors and the number of their changes and lines of code in this directory">
+    <colgroup align="left"/>
+    <colgroup align="right"/>
+    <colgroup align="right"/>
+    <colgroup align="right"/>
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Changes</th>
+        <th>Lines of Code</th>
+        <th>Lines per Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  class="odd">
+        <th><a href="user_rhickey.html" class="author">rhickey</a></th>
+        <td>58 (100.0%)</td>
+        <td>2333 (100.0%)</td>
+        <td>40.2</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<div class="section">
+<h2>Most Recent Commits</h2>
+<dl class="commitlist">
+  <dt><a name="34"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2007-09-22 23:32</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">455</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+refactoring dumping unused classes
+    </p>
+    <p class="commitdetails"><strong>0</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="del">(del)</span>,
+        lib.lisp&#160;<span class="del">(del)</span>,
+        test.lisp&#160;<span class="del">(del)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="33"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-07-05 21:51</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">185</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made fn() public, changed compiler to call it
+    </p>
+    <p class="commitdetails"><strong>2</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+2&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="32"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-21 19:46</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">175</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+changed to support variadic invoke
+    </p>
+    <p class="commitdetails"><strong>8</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+8&#160;-14)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="31"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-20 16:24</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">171</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+sync lisp with runtime changes
+    </p>
+    <p class="commitdetails"><strong>18</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+17&#160;-15)</span>,
+        lib.lisp&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="30"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-06-03 20:35</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">114</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+brought compiler and runtime back in sync
+    </p>
+    <p class="commitdetails"><strong>9</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+9&#160;-33)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="29"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-11 22:41</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">85</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+starting library support
+    </p>
+    <p class="commitdetails"><strong>258</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+23&#160;-3)</span>,
+        lib.lisp&#160;<span class="new">(new&#160;235)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="28"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-09 16:07</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">81</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added instance?
+    </p>
+    <p class="commitdetails"><strong>37</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+32&#160;-2)</span>,
+        test.lisp&#160;<span class="change">(+5)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="27"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-09 03:03</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">78</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Hello world!
+    </p>
+    <p class="commitdetails"><strong>36</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+24&#160;-2)</span>,
+        test.lisp&#160;<span class="change">(+12&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="26"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-08 23:51</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">77</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added static fields/properties
+    </p>
+    <p class="commitdetails"><strong>41</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+32&#160;-6)</span>,
+        test.lisp&#160;<span class="change">(+9&#160;-6)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="25"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-08 23:21</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">76</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added static invoke
+    </p>
+    <p class="commitdetails"><strong>51</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+39&#160;-24)</span>,
+        test.lisp&#160;<span class="change">(+12&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="24"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-08 22:48</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">75</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added import
+    </p>
+    <p class="commitdetails"><strong>25</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+25&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="23"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-08 18:11</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">73</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added casts
+    </p>
+    <p class="commitdetails"><strong>27</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+23&#160;-2)</span>,
+        test.lisp&#160;<span class="change">(+4&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="22"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-08 15:15</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">68</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+switched to box on character literals
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="21"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-05 20:35</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">62</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added quote, RT.arrayToList
+    </p>
+    <p class="commitdetails"><strong>55</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+48&#160;-5)</span>,
+        test.lisp&#160;<span class="change">(+7&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="20"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-04 13:45</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">61</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added string, number and char literals, RT.ch()
+    </p>
+    <p class="commitdetails"><strong>41</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+31&#160;-11)</span>,
+        test.lisp&#160;<span class="change">(+10&#160;-9)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="19"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-03 23:41</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">60</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added bind
+    </p>
+    <p class="commitdetails"><strong>52</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+43&#160;-3)</span>,
+        test.lisp&#160;<span class="change">(+9&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="18"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-03 21:43</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">59</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added try
+    </p>
+    <p class="commitdetails"><strong>71</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+52&#160;-2)</span>,
+        test.lisp&#160;<span class="change">(+19)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="17"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-03 12:49</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">58</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed global binding references
+    </p>
+    <p class="commitdetails"><strong>18</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+14&#160;-12)</span>,
+        test.lisp&#160;<span class="change">(+4&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="16"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-03 02:50</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">57</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added loop/break
+    </p>
+    <p class="commitdetails"><strong>100</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+89&#160;-3)</span>,
+        test.lisp&#160;<span class="change">(+11&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="15"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-01 23:27</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">56</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added set
+    </p>
+    <p class="commitdetails"><strong>83</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+75&#160;-1)</span>,
+        test.lisp&#160;<span class="change">(+8&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="14"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-05-01 21:02</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">55</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added and, or, not<br />
+mark letfns as assigned so they get boxed when closed over
+    </p>
+    <p class="commitdetails"><strong>119</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+98&#160;-22)</span>,
+        test.lisp&#160;<span class="change">(+21&#160;-5)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="13"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-30 19:58</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">51</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added if
+    </p>
+    <p class="commitdetails"><strong>65</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+57&#160;-1)</span>,
+        test.lisp&#160;<span class="change">(+8)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="12"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-30 19:20</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">50</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added letfn
+    </p>
+    <p class="commitdetails"><strong>38</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+32&#160;-2)</span>,
+        test.lisp&#160;<span class="change">(+6)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="11"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-30 16:53</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">49</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+more closure support
+    </p>
+    <p class="commitdetails"><strong>36</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+28&#160;-23)</span>,
+        test.lisp&#160;<span class="change">(+8&#160;-4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="10"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-29 22:00</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">48</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added let. let*
+    </p>
+    <p class="commitdetails"><strong>53</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+44&#160;-5)</span>,
+        test.lisp&#160;<span class="change">(+9&#160;-4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="9"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-29 16:01</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">47</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+interim checkin
+    </p>
+    <p class="commitdetails"><strong>55</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+49&#160;-2)</span>,
+        test.lisp&#160;<span class="change">(+6)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="8"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-28 20:59</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">46</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added support for invoke calls
+    </p>
+    <p class="commitdetails"><strong>143</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+129&#160;-15)</span>,
+        test.lisp&#160;<span class="change">(+14&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="7"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-26 19:58</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">44</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+can generate empty fns, added test.lisp
+    </p>
+    <p class="commitdetails"><strong>196</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+187&#160;-64)</span>,
+        test.lisp&#160;<span class="new">(new&#160;9)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="6"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-25 21:43</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">43</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+interim checkin
+    </p>
+    <p class="commitdetails"><strong>189</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+189&#160;-21)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="5"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-25 00:47</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">42</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+interim checkin
+    </p>
+    <p class="commitdetails"><strong>379</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+379&#160;-8)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="4"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-12 18:28</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">35</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added array naming, overload resolution
+    </p>
+    <p class="commitdetails"><strong>65</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+65&#160;-27)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="3"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-12 14:59</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">34</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added notice
+    </p>
+    <p class="commitdetails"><strong>10</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+10)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="2"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-11 23:58</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">33</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added methods to load-types
+    </p>
+    <p class="commitdetails"><strong>48</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="change">(+48&#160;-4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="1"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2006-04-11 23:00</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">31</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added clojure.lisp
+    </p>
+    <p class="commitdetails"><strong>4</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/lisp</strong>:
+        clojure.lisp&#160;<span class="new">(new&#160;4)</span>
+      </li>
+    </ul>
+  </dd>
+
+</dl>
+
+</div><div id="generatedby">Generated by <a href="http://www.statsvn.org">StatSVN</a> 0.7.0</div>
+</body>
+</html>

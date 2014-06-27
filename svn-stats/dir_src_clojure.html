@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>StatSVN - Directory src/clojure/</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <meta name="Generator" content="StatSVN 0.7.0"/>
+<link rel="stylesheet" href="objectlab-statcvs.css" type="text/css"/>
+<script type="text/javascript" charset="utf-8" src="http://bit.ly/javascript-api.js?version=latest&#38;login=statsvn&#38;apiKey=R_2c362b417d0517c27876cbaca1bb68cc"></script>
+<script type="text/javascript" charset="utf-8">
+   // wait until page is loaded to call API
+   var redir_url;
+   var short_url;
+   BitlyCB.myShortenCallback = function(data) {
+      // this is how to get a result of shortening a single url
+      var result;
+      short_url=null;
+      for (var r in data.results) {
+         result = data.results[r];
+         result['longUrl'] = r;
+         short_url = result['shortUrl'];
+         break;
+      }
+      if (short_url==null) // bit.ly failed
+      document.location=redir_url;
+      else
+      redirToTwitter();
+   };
+   function shortenTweet(url) {
+      if (short_url == null || redir_url!=url) {
+      redir_url = url;
+      BitlyClient.shorten(document.location, 'BitlyCB.myShortenCallback');
+      }
+      else
+      redirToTwitter();
+      return false;
+   }
+   function redirToTwitter() { 
+      // replace {0} which is visible as %7B0} in the link
+      document.location = redir_url.replace('%7B0}', short_url);
+   }
+</script>
+  </head>
+
+<body>
+
+<h1>Directory src/clojure/</h1>
+<div id="parentlink">&#171; <a href="index.html">Development Statistics for /trunk</a></div>
+<dl class="attributes">
+    <dt>Directory Created:</dt>
+    <dd><span class="date">2008-07-21 19:59</span></dd>
+    <dt>Directory Deleted:</dt>
+    <dd><span class="date">2008-07-29 13:26</span></dd>
+    <dt>Total Files:</dt>
+    <dd>0</dd>
+    <dt>Deleted Files:</dt>
+    <dd>3</dd>
+    <dt>Lines of Code:</dt>
+    <dd>0</dd>
+</dl>
+<p class="dirtree">
+<a href="dir.html">[root]</a>/<a href="dir_src.html">src</a>/<strong>clojure</strong><br/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="folder-deleted.png" width="15" height="13" alt="Folder removed from repo" title="Folder removed from repo"/> 
+<a href="dir_src_clojure_inspector.html">inspector</a> 
+(0 files, 0 lines)<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="folder-deleted.png" width="15" height="13" alt="Folder removed from repo" title="Folder removed from repo"/> 
+<a href="dir_src_clojure_parallel.html">parallel</a> 
+(0 files, 0 lines)<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="folder-deleted.png" width="15" height="13" alt="Folder removed from repo" title="Folder removed from repo"/> 
+<a href="dir_src_clojure_set.html">set</a> 
+(0 files, 0 lines)<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="folder-deleted.png" width="15" height="13" alt="Folder removed from repo" title="Folder removed from repo"/> 
+<a href="dir_src_clojure_xml.html">xml</a> 
+(0 files, 0 lines)<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<img src="folder-deleted.png" width="15" height="13" alt="Folder removed from repo" title="Folder removed from repo"/> 
+<a href="dir_src_clojure_zip.html">zip</a> 
+(0 files, 0 lines)<br />
+</p>
+
+<div class="section">
+<h2>Lines of Code</h2>
+<p class="chart"><img src="loc_module_src_clojure.png" alt="src/clojure/ Lines of Code" width="800" height="500" /></p></div>
+<div class="section">
+<h2>Developers</h2>
+  <table  rules="groups" summary="All authors and the number of their changes and lines of code in this directory">
+    <colgroup align="left"/>
+    <colgroup align="right"/>
+    <colgroup align="right"/>
+    <colgroup align="right"/>
+    <thead>
+      <tr>
+        <th>Author</th>
+        <th>Changes</th>
+        <th>Lines of Code</th>
+        <th>Lines per Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  class="odd">
+        <th><a href="user_rhickey.html" class="author">rhickey</a></th>
+        <td>18 (100.0%)</td>
+        <td>3773 (100.0%)</td>
+        <td>209.6</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<div class="section">
+<h2>Most Recent Commits</h2>
+<dl class="commitlist">
+  <dt><a name="14"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-29 13:26</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">971</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+updated docs and example, from Chouser
+    </p>
+    <p class="commitdetails"><strong>0</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        boot.clj&#160;<span class="del">(del)</span>,
+        genclass.clj&#160;<span class="del">(del)</span>,
+        proxy.clj&#160;<span class="del">(del)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="13"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-28 18:52</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">969</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+updated docs and example, from Chouser
+    </p>
+    <p class="commitdetails"><strong>46</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        genclass.clj&#160;<span class="change">(+46&#160;-44)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="12"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-28 18:28</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">968</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+new namespace and class rules for genclass, patch from Chouser
+    </p>
+    <p class="commitdetails"><strong>3</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        genclass.clj&#160;<span class="change">(+3&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="11"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-28 16:52</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">967</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added prefer-method
+    </p>
+    <p class="commitdetails"><strong>4</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        boot.clj&#160;<span class="change">(+4&#160;-7)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="10"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-28 02:38</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">965</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+removed nil returns from derive/underive base cases
+    </p>
+    <p class="commitdetails"><strong>13</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        boot.clj&#160;<span class="change">(+13&#160;-11)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="9"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-28 02:25</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">964</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed :exposes to use getDeclaredField
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        genclass.clj&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="8"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-28 02:17</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">963</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed class bug in isa?
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        boot.clj&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="7"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-28 02:02</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">962</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+isa-based multimethods, a la carte hierarchies
+    </p>
+    <p class="commitdetails"><strong>148</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        boot.clj&#160;<span class="change">(+148&#160;-7)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="6"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-25 21:22</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">961</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added type hints to pr-strs and class? predicate
+    </p>
+    <p class="commitdetails"><strong>9</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        boot.clj&#160;<span class="change">(+9&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="5"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-24 15:31</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">957</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed doc typo
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        boot.clj&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="4"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-24 15:06</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">956</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+improved validator docs
+    </p>
+    <p class="commitdetails"><strong>18</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        boot.clj&#160;<span class="change">(+18&#160;-4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="3"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-24 01:23</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">955</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added validators for vars/refs/agents - an optional second arg for agent and ref, get/set-validator, also shutdown-agents
+    </p>
+    <p class="commitdetails"><strong>19</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        boot.clj&#160;<span class="change">(+19&#160;-4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="2"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-21 21:41</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">950</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+first cut at namespace aliases, via Graham Fawcett
+    </p>
+    <p class="commitdetails"><strong>16</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        boot.clj&#160;<span class="change">(+16)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="1"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-07-21 19:59</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">949</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+new clj code hierarchy, old still in place
+    </p>
+    <p class="commitdetails"><strong>3494</strong> lines of code changed in <span class="files">3 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clojure</strong>:
+        boot.clj&#160;<span class="new">(new&#160;2670)</span>,
+        genclass.clj&#160;<span class="new">(new&#160;517)</span>,
+        proxy.clj&#160;<span class="new">(new&#160;307)</span>
+      </li>
+    </ul>
+  </dd>
+
+</dl>
+
+</div><div id="generatedby">Generated by <a href="http://www.statsvn.org">StatSVN</a> 0.7.0</div>
+</body>
+</html>

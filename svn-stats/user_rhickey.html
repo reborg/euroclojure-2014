@@ -1,0 +1,751 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>StatSVN - /trunk Developers: rhickey</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <meta name="Generator" content="StatSVN 0.7.0"/>
+<link rel="stylesheet" href="objectlab-statcvs.css" type="text/css"/>
+<script type="text/javascript" charset="utf-8" src="http://bit.ly/javascript-api.js?version=latest&#38;login=statsvn&#38;apiKey=R_2c362b417d0517c27876cbaca1bb68cc"></script>
+<script type="text/javascript" charset="utf-8">
+   // wait until page is loaded to call API
+   var redir_url;
+   var short_url;
+   BitlyCB.myShortenCallback = function(data) {
+      // this is how to get a result of shortening a single url
+      var result;
+      short_url=null;
+      for (var r in data.results) {
+         result = data.results[r];
+         result['longUrl'] = r;
+         short_url = result['shortUrl'];
+         break;
+      }
+      if (short_url==null) // bit.ly failed
+      document.location=redir_url;
+      else
+      redirToTwitter();
+   };
+   function shortenTweet(url) {
+      if (short_url == null || redir_url!=url) {
+      redir_url = url;
+      BitlyClient.shorten(document.location, 'BitlyCB.myShortenCallback');
+      }
+      else
+      redirToTwitter();
+      return false;
+   }
+   function redirToTwitter() { 
+      // replace {0} which is visible as %7B0} in the link
+      document.location = redir_url.replace('%7B0}', short_url);
+   }
+</script>
+  </head>
+
+<body>
+
+<h1>/trunk Developers: rhickey</h1>
+<div id="parentlink">&#171; <a href="index.html">Development Statistics for /trunk</a> &#171; <a href="developers.html">Developers</a></div>
+<dl class="attributes">
+    <dt>Login name:</dt>
+    <dd>rhickey</dd>
+    <dt>Total Commits:</dt>
+    <dd>3,475 (97.1%)</dd>
+    <dt>Lines of Code:</dt>
+    <dd>125,634 (100.0%)</dd>
+    <dt>Most Recent Commit:</dt>
+    <dd><span class="date">2008-12-16 15:10</span></dd>
+    <dt>Tweet this:</dt>
+    <dd><a onclick="return shortenTweet(this.href);" href="http://twitter.com/home?status=rhickey%20contributed%20125%2C634%20(100.0%25)%20lines%20to%20%2Ftrunk%20%7B0}%20most%20recent%20commit%202008-12-16%20stats%20by%20StatSVN%20http%3A%2F%2Fstatsvn.org"><img style="border:0px" alt="Tweet this" src="tweet-this.png"/></a></dd>
+</dl>
+
+<div class="section">
+<h2>Activity by Clock Time</h2>
+<p class="chart"><img src="activity_time_rhickey.png" alt="Activity by Hour of Day for rhickey" width="800" height="500" /></p><p class="chart"><img src="activity_day_rhickey.png" alt="Activity by Day of Week for rhickey" width="800" height="500" /></p></div>
+<div class="section">
+<h2>Activity in Directories</h2>
+  <table  rules="groups" summary="Overview of this author's activities in different directories">
+    <colgroup align="left"/>
+    <colgroup align="right"/>
+    <colgroup align="right"/>
+    <colgroup align="right"/>
+    <thead>
+      <tr>
+        <th>Directory</th>
+        <th>Changes</th>
+        <th>Lines of Code</th>
+        <th>Lines per Change</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>Totals</th>
+        <td>3475 (100.0%)</td>
+        <td>125634 (100.0%)</td>
+        <td>36.1</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr  class="odd">
+        <th><a href="dir_src_jvm_clojure_lang.html" class="directory">src/jvm/clojure/lang/</a></th>
+        <td>1736 (50.0%)</td>
+        <td>55998 (44.6%)</td>
+        <td>32.2</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir_src_clj_clojure.html" class="directory">src/clj/clojure/</a></th>
+        <td>139 (4.0%)</td>
+        <td>12735 (10.1%)</td>
+        <td>91.6</td>
+      </tr>
+      <tr  class="odd">
+        <th><a href="dir_src_jvm_clojure_asm.html" class="directory">src/jvm/clojure/asm/</a></th>
+        <td>21 (0.6%)</td>
+        <td>12586 (10.0%)</td>
+        <td>599.3</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir_src_cli_runtime.html" class="directory">src/cli/runtime/</a></th>
+        <td>588 (16.9%)</td>
+        <td>11121 (8.9%)</td>
+        <td>18.9</td>
+      </tr>
+      <tr  class="odd">
+        <th><a href="dir_src_org_clojure_runtime.html" class="directory">src/org/clojure/runtime/</a></th>
+        <td>327 (9.4%)</td>
+        <td>9502 (7.6%)</td>
+        <td>29.0</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir_src.html" class="directory">src/</a></th>
+        <td>314 (9.0%)</td>
+        <td>9490 (7.6%)</td>
+        <td>30.2</td>
+      </tr>
+      <tr  class="odd">
+        <th><a href="dir_src_jvm_clojure_asm_commons.html" class="directory">src/jvm/clojure/asm/commons/</a></th>
+        <td>11 (0.3%)</td>
+        <td>4917 (3.9%)</td>
+        <td>447.0</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir_src_clojure.html" class="directory">src/clojure/</a></th>
+        <td>18 (0.5%)</td>
+        <td>3773 (3.0%)</td>
+        <td>209.6</td>
+      </tr>
+      <tr  class="odd">
+        <th><a href="dir_src_lisp.html" class="directory">src/lisp/</a></th>
+        <td>58 (1.7%)</td>
+        <td>2333 (1.9%)</td>
+        <td>40.2</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir.html" class="directory">/</a></th>
+        <td>61 (1.8%)</td>
+        <td>1962 (1.6%)</td>
+        <td>32.1</td>
+      </tr>
+      <tr  class="odd">
+        <th><a href="dir_src_clojure_parallel.html" class="directory">src/clojure/parallel/</a></th>
+        <td>3 (0.1%)</td>
+        <td>249 (0.2%)</td>
+        <td>83.0</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir_src_clojure_zip.html" class="directory">src/clojure/zip/</a></th>
+        <td>2 (0.1%)</td>
+        <td>248 (0.2%)</td>
+        <td>124.0</td>
+      </tr>
+      <tr  class="odd">
+        <th><a href="dir_src_org_clojure_tools.html" class="directory">src/org/clojure/tools/</a></th>
+        <td>4 (0.1%)</td>
+        <td>237 (0.2%)</td>
+        <td>59.2</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir_src_clojure_xml.html" class="directory">src/clojure/xml/</a></th>
+        <td>2 (0.1%)</td>
+        <td>117 (0.1%)</td>
+        <td>58.5</td>
+      </tr>
+      <tr  class="odd">
+        <th><a href="dir_src_clojure_set.html" class="directory">src/clojure/set/</a></th>
+        <td>2 (0.1%)</td>
+        <td>116 (0.1%)</td>
+        <td>58.0</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir_src_clojure_inspector.html" class="directory">src/clojure/inspector/</a></th>
+        <td>2 (0.1%)</td>
+        <td>110 (0.1%)</td>
+        <td>55.0</td>
+      </tr>
+      <tr  class="odd">
+        <th><a href="dir_src_jvm.html" class="directory">src/jvm/</a></th>
+        <td>5 (0.1%)</td>
+        <td>87 (0.1%)</td>
+        <td>17.4</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir_src_clj.html" class="directory">src/clj/</a></th>
+        <td>2 (0.1%)</td>
+        <td>11 (0.0%)</td>
+        <td>5.5</td>
+      </tr>
+      <tr  class="odd">
+        <th><a href="dir_src_clj_clojure_xml.html" class="directory">src/clj/clojure/xml/</a></th>
+        <td>4 (0.1%)</td>
+        <td>10 (0.0%)</td>
+        <td>2.5</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir_src_clj_clojure_inspector.html" class="directory">src/clj/clojure/inspector/</a></th>
+        <td>3 (0.1%)</td>
+        <td>10 (0.0%)</td>
+        <td>3.3</td>
+      </tr>
+      <tr  class="odd">
+        <th><a href="dir_src_cli_TypeDump.html" class="directory">src/cli/TypeDump/</a></th>
+        <td>3 (0.1%)</td>
+        <td>10 (0.0%)</td>
+        <td>3.3</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir_src_clj_clojure_zip.html" class="directory">src/clj/clojure/zip/</a></th>
+        <td>5 (0.1%)</td>
+        <td>6 (0.0%)</td>
+        <td>1.2</td>
+      </tr>
+      <tr  class="odd">
+        <th><a href="dir_src_clj_clojure_set.html" class="directory">src/clj/clojure/set/</a></th>
+        <td>3 (0.1%)</td>
+        <td>3 (0.0%)</td>
+        <td>1.0</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir_src_clj_clojure_parallel.html" class="directory">src/clj/clojure/parallel/</a></th>
+        <td>3 (0.1%)</td>
+        <td>3 (0.0%)</td>
+        <td>1.0</td>
+      </tr>
+      <tr  class="odd">
+        <th><a href="dir_src_jvm_clojure_tools.html" class="directory">src/jvm/clojure/tools/</a></th>
+        <td>3 (0.1%)</td>
+        <td>0 (0.0%)</td>
+        <td>0.0</td>
+      </tr>
+      <tr  class="even">
+        <th><a href="dir_src_jvm_clojure_runtime.html" class="directory">src/jvm/clojure/runtime/</a></th>
+        <td>156 (4.5%)</td>
+        <td>0 (0.0%)</td>
+        <td>0.0</td>
+      </tr>
+    </tbody>
+  </table>
+
+<p class="chart"><img src="directory_sizes_rhickey.png" alt="Activity of rhickey" width="800" height="500" /></p></div>
+<div class="section">
+<h2>Most Recent Commits</h2>
+<dl class="commitlist">
+  <dt><a name="20"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-16 15:10</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1162</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+EPL in header
+    </p>
+    <p class="commitdetails"><strong>41</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        clojure.iml&#160;<span class="change">(+39)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        AFunction.java&#160;<span class="change">(+2&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="19"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-16 14:28</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1161</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+refactored Comparator into superclass of functions only
+    </p>
+    <p class="commitdetails"><strong>51</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        AFn.java&#160;<span class="change">(+1&#160;-20)</span>,
+        AFunction.java&#160;<span class="new">(new&#160;47)</span>,
+        Compiler.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="18"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-14 21:01</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1160</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+Moved to Eclipse Public License  - see epl-v10.html or<br />
+<a href="http://opensource.org/licenses/eclipse">http://opensource.org/licenses/eclipse</a>-1.0.php
+    </p>
+    <p class="commitdetails"><strong>444</strong> lines of code changed in <span class="files">95 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        CPL.TXT&#160;<span class="del">(del)</span>,
+        clojure.markdown&#160;<span class="del">(del)</span>,
+        epl-v10.html&#160;<span class="new">(new&#160;261)</span>,
+        readme.txt&#160;<span class="change">(+3&#160;-3)</span>
+      </li>
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        core_print.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        core_proxy.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        genclass.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        inspector.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        main.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        parallel.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        proxy.clj&#160;<span class="del">(del)</span>,
+        set.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        xml.clj&#160;<span class="change">(+2&#160;-2)</span>,
+        zip.clj&#160;<span class="change">(+2&#160;-2)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        AFn.java&#160;<span class="change">(+2&#160;-2)</span>,
+        AMapEntry.java&#160;<span class="change">(+2&#160;-2)</span>,
+        APersistentMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        APersistentSet.java&#160;<span class="change">(+2&#160;-2)</span>,
+        APersistentVector.java&#160;<span class="change">(+2&#160;-2)</span>,
+        ASeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Agent.java&#160;<span class="change">(+2&#160;-2)</span>,
+        ArraySeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        ArrayStream.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Associative.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Binding.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Box.java&#160;<span class="change">(+2&#160;-2)</span>,
+        CachedSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Compile.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Compiler.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Cons.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Delay.java&#160;<span class="change">(+2&#160;-2)</span>,
+        DynamicClassLoader.java&#160;<span class="change">(+2&#160;-2)</span>,
+        EnumerationSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Fn.java&#160;<span class="change">(+2&#160;-2)</span>,
+        FnSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IFn.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IMapEntry.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IObj.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IPersistentCollection.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IPersistentList.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IPersistentMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IPersistentSet.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IPersistentStack.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IPersistentVector.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IProxy.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IReduce.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IRef.java&#160;<span class="change">(+2&#160;-2)</span>,
+        ISeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IStream.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IndexedSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IteratorSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        IteratorStream.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Keyword.java&#160;<span class="change">(+2&#160;-2)</span>,
+        LazilyPersistentVector.java&#160;<span class="change">(+2&#160;-2)</span>,
+        LazyCons.java&#160;<span class="change">(+2&#160;-2)</span>,
+        LazySeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        LineNumberingPushbackReader.java&#160;<span class="change">(+2&#160;-2)</span>,
+        LispReader.java&#160;<span class="change">(+2&#160;-2)</span>,
+        LockingTransaction.java&#160;<span class="change">(+2&#160;-2)</span>,
+        MapEntry.java&#160;<span class="change">(+2&#160;-2)</span>,
+        MultiFn.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Named.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Namespace.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Numbers.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Obj.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentArrayMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentHashSet.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentList.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentQueue.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentStructMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentTreeMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        PersistentTreeSet.java&#160;<span class="change">(+2&#160;-2)</span>,
+        ProxyHandler.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RT.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Range.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Ratio.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Ref.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Reflector.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Repl.java&#160;<span class="change">(+2&#160;-2)</span>,
+        RestFn.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Reversible.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Script.java&#160;<span class="change">(+2&#160;-2)</span>,
+        SeqEnumeration.java&#160;<span class="change">(+2&#160;-2)</span>,
+        SeqIterator.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Sequential.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Sorted.java&#160;<span class="change">(+2&#160;-2)</span>,
+        StreamSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Streamable.java&#160;<span class="change">(+2&#160;-2)</span>,
+        StringSeq.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Symbol.java&#160;<span class="change">(+2&#160;-2)</span>,
+        TransactionalHashMap.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Util.java&#160;<span class="change">(+2&#160;-2)</span>,
+        Var.java&#160;<span class="change">(+2&#160;-2)</span>,
+        XMLHandler.java&#160;<span class="change">(+2&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="17"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-13 20:25</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1159</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+proxy perf tweaks<br />
+Note breaking change if you are using the proxy interface other than the proxy macro itself - proxy maps are now maps of (preferably interned) strings to fns, not symbols to fns, and if you construct a proxy manually you must establish initial map with init-proxy
+    </p>
+    <p class="commitdetails"><strong>38</strong> lines of code changed in <span class="files">4 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core_proxy.clj&#160;<span class="change">(+31&#160;-17)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        IProxy.java&#160;<span class="change">(+3&#160;-2)</span>,
+        PersistentArrayMap.java&#160;<span class="change">(+1&#160;-1)</span>,
+        RT.java&#160;<span class="change">(+3&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="16"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-13 03:37</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1158</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+force instance member interpretation of (.method ClassName), e.g. (.getMethods String) works
+    </p>
+    <p class="commitdetails"><strong>7</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+7&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="15"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-12 23:37</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1157</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+removed sharing in registerConstant
+    </p>
+    <p class="commitdetails"><strong>0</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="14"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-12 21:00</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1156</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+fixed tagToClass for chars
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="13"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-12 17:46</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1155</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+check for static field in classname/fieldname
+    </p>
+    <p class="commitdetails"><strong>2</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+2&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="12"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-12 04:29</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1154</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+emit string constants directly
+    </p>
+    <p class="commitdetails"><strong>45</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Compiler.java&#160;<span class="change">(+45&#160;-22)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="11"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-11 21:27</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1153</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+release coll on nth of seq, stream work in progress
+    </p>
+    <p class="commitdetails"><strong>373</strong> lines of code changed in <span class="files">8 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        APersistentVector.java&#160;<span class="change">(+15&#160;-2)</span>,
+        ASeq.java&#160;<span class="change">(+23&#160;-1)</span>,
+        ArrayStream.java&#160;<span class="new">(new&#160;194)</span>,
+        IStream.java&#160;<span class="new">(new&#160;17)</span>,
+        IteratorStream.java&#160;<span class="new">(new&#160;29)</span>,
+        Range.java&#160;<span class="change">(+14&#160;-1)</span>,
+        StreamSeq.java&#160;<span class="new">(new&#160;64)</span>,
+        Streamable.java&#160;<span class="new">(new&#160;17)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="10"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-11 21:20</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1152</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+release coll on nth of seq
+    </p>
+    <p class="commitdetails"><strong>45</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        RT.java&#160;<span class="change">(+45&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="9"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-11 15:28</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1151</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added if-not, memoize, and io!<br />
+io! blocks will throw exceptions when run in transactions<br />
+made await and await-for use io!
+    </p>
+    <p class="commitdetails"><strong>46</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+42&#160;-8)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        LockingTransaction.java&#160;<span class="change">(+4)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="8"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-10 23:54</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1150</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+releaxed namespace requirement for derives in private hierarchy, patch from J. McConnell
+    </p>
+    <p class="commitdetails"><strong>6</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+6&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="7"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-10 01:17</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1149</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added :exposes-methods to gen-class, patch from Matt Revelle
+    </p>
+    <p class="commitdetails"><strong>27</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        genclass.clj&#160;<span class="change">(+27&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="6"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-09 15:36</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1148</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+support :when and :while together in for, patch from Chouser
+    </p>
+    <p class="commitdetails"><strong>32</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+32&#160;-36)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="5"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-08 02:44</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1147</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added unchecked-remainder
+    </p>
+    <p class="commitdetails"><strong>14</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+6)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        Numbers.java&#160;<span class="change">(+8)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="4"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-07 15:14</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1146</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+added doc string for *agent*
+    </p>
+    <p class="commitdetails"><strong>3</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        RT.java&#160;<span class="change">(+3&#160;-2)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="3"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-05 01:19</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1145</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made RT.DEFAULT_COMPARATOR use Util.compare
+    </p>
+    <p class="commitdetails"><strong>2</strong> lines of code changed in <span class="files">2 files</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core.clj&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        RT.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="2"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-04 13:53</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1144</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+made APersistenVector.compareTo use Util.compare on elements
+    </p>
+    <p class="commitdetails"><strong>1</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/jvm/clojure/lang</strong>:
+        APersistentVector.java&#160;<span class="change">(+1&#160;-1)</span>
+      </li>
+    </ul>
+  </dd>
+
+  <dt><a name="1"></a>
+    <a href="user_rhickey.html" class="author">rhickey</a>
+    <span class="date">2008-12-04 13:46</span>
+    <span class="revisionNumberOuter">Rev.: <span class="revisionNumberInner">1143</span></span>
+  </dt>
+  <dd>
+    <p class="comment">
+swap! returns new value
+    </p>
+    <p class="commitdetails"><strong>5</strong> lines of code changed in <span class="files">1 file</span>:</p>
+    <ul class="commitdetails">
+      <li>
+        <strong>src/clj/clojure</strong>:
+        core_proxy.clj&#160;<span class="change">(+5&#160;-3)</span>
+      </li>
+    </ul>
+  </dd>
+
+</dl>
+
+<p>(1121 more)</p>
+</div><div id="generatedby">Generated by <a href="http://www.statsvn.org">StatSVN</a> 0.7.0</div>
+</body>
+</html>
